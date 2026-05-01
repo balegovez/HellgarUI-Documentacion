@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Utilidades · HellgarUI</title>
+    <link rel="icon" href="../icon/hellgar-icon.png" type="image/png" />
+    <link rel="stylesheet" href="/HellgarUI/scss/main.css" />
+  </head>
+  <body class="bg-light">
+    <nav class="navbar">
+      <a href="/index.html" class="navbar-brand">HellgarUI</a>
+
+      <input type="checkbox" id="main-nav-toggle" class="navbar-toggle" />
+      <label
+        for="main-nav-toggle"
+        class="navbar-toggler"
+        aria-label="Abrir menú"
+      >
+        <span></span><span></span><span></span>
+      </label>
+
+      <ul class="navbar-nav">
+        <li><a href="/index.html" class="navbar-link">Inicio</a></li>
+        <li><a href="grid.html" class="navbar-link">Grid</a></li>
+        <li><a href="buttons.html" class="navbar-link">Botones</a></li>
+        <li><a href="cards.html" class="navbar-link">Cards</a></li>
+        <li><a href="alerts.html" class="navbar-link">Alerts</a></li>
+        <li><a href="forms.html" class="navbar-link">Forms</a></li>
+        <li><a href="tables.html" class="navbar-link">Tablas</a></li>
+        <li><a href="colors.html" class="navbar-link">Colores</a></li>
+        <li><a href="typography.html" class="navbar-link">Tipografía</a></li>
+        <li><a href="spacing.html" class="navbar-link">Spacing</a></li>
+        <li><a href="utilities.html" class="navbar-link active">Utilidades</a></li>
+        <li><a href="badges.html" class="navbar-link">Badges</a></li>
+        <li><a href="../utilities/navbar.html" class="navbar-link">Navbars</a></li>
+        <li><a href="../utilities/footer.html" class="navbar-link">Footers</a></li>
+      </ul>
+    </nav>
+
+    <header class="bg-secondary py-5">
+      <div class="container">
+        <span class="badge badge-primary mb-2">utilidad</span>
+        <h1 class="fs-1 fw-bold text-white m-0">Utilidades</h1>
+        <p class="fs-5 text-light m-0">
+          Display, flexbox, bordes, redondeados, sombras. Las herramientas que
+          van encima de los componentes.
+        </p>
+      </div>
+    </header>
+
+    <main class="container py-5">
+      <div class="row">
+        <aside class="col-12 col-md-3 mb-4">
+          <div class="card shadow-sm">
+            <div class="card-header">En esta página</div>
+            <div class="card-body">
+              <ul class="d-flex flex-column gap-2">
+                <li>
+                  <a href="#display" class="navbar-link text-dark">Display</a>
+                </li>
+                <li>
+                  <a href="#flex" class="navbar-link text-dark">Flexbox</a>
+                </li>
+                <li>
+                  <a href="#gap" class="navbar-link text-dark">Gap</a>
+                </li>
+                <li>
+                  <a href="#bordes" class="navbar-link text-dark">Bordes</a>
+                </li>
+                <li>
+                  <a href="#redondeo" class="navbar-link text-dark"
+                    >Redondeado</a
+                  >
+                </li>
+                <li>
+                  <a href="#sombras" class="navbar-link text-dark">Sombras</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+
+        <div class="col-12 col-md-9">
+          <article id="display" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Display</h2>
+            <p class="mb-3">
+              <code>.d-{valor}</code> y su versión responsiva
+              <code>.d-{breakpoint}-{valor}</code>. Sirve para mostrar, ocultar
+              o cambiar el modo de un elemento por viewport.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Valores disponibles</div>
+              <div class="card-body bg-light">
+                <ul class="m-0" style="padding-left: 1.2rem;">
+                  <li><code>d-none</code> · oculto</li>
+                  <li><code>d-block</code> · bloque clásico</li>
+                  <li><code>d-inline</code> · inline puro</li>
+                  <li><code>d-inline-block</code> · inline pero acepta tamaños</li>
+                  <li><code>d-flex</code> · contenedor flex</li>
+                  <li><code>d-inline-flex</code> · flex en línea</li>
+                  <li><code>d-grid</code> · contenedor grid</li>
+                </ul>
+              </div>
+              <div class="card-footer p-0">
+                <pre
+                  class="bg-secondary text-light p-3 m-0"
+                ><code>&lt;!-- Mostrar el bloque sólo desde tablet --&gt;
+&lt;div class="d-none d-md-block"&gt;Visible en md y arriba&lt;/div&gt;
+
+&lt;!-- Ocultar en mobile, flex en desktop --&gt;
+&lt;div class="d-none d-lg-flex"&gt;...&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+
+          <article id="flex" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Flexbox</h2>
+            <p class="mb-3">
+              Las clases siguen el patrón Bootstrap:
+              <code>.justify-content-*</code>, <code>.align-items-*</code>,
+              <code>.flex-row</code>, <code>.flex-column</code>,
+              <code>.flex-wrap</code>.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">justify-content</div>
+              <div class="card-body bg-light">
+                <p class="text-muted mb-2">.justify-content-start</p>
+                <div class="border p-3 rounded bg-white d-flex justify-content-start gap-2 mb-3">
+                  <div class="p-2 px-3 border border-primary text-primary rounded bg-white fw-bold">A</div>
+                  <div class="p-2 px-3 border border-primary text-primary rounded bg-white fw-bold">B</div>
+                  <div class="p-2 px-3 border border-primary text-primary rounded bg-white fw-bold">C</div>
+                </div>
+                <p class="text-muted mb-2">.justify-content-center</p>
+                <div class="border p-3 rounded bg-white d-flex justify-content-center gap-2 mb-3">
+                  <div class="p-2 px-3 border border-primary text-primary rounded bg-white fw-bold">A</div>
+                  <div class="p-2 px-3 border border-primary text-primary rounded bg-white fw-bold">B</div>
+                  <div class="p-2 px-3 border border-primary text-primary rounded bg-white fw-bold">C</div>
+                </div>
+                <p class="text-muted mb-2">.justify-content-between</p>
+                <div class="border p-3 rounded bg-white d-flex justify-content-between gap-2 mb-3">
+                  <div class="p-2 px-3 border border-primary text-primary rounded bg-white fw-bold">A</div>
+                  <div class="p-2 px-3 border border-primary text-primary rounded bg-white fw-bold">B</div>
+                  <div class="p-2 px-3 border border-primary text-primary rounded bg-white fw-bold">C</div>
+                </div>
+                <p class="text-muted mb-2">.justify-content-end</p>
+                <div class="border p-3 rounded bg-white d-flex justify-content-end gap-2">
+                  <div class="p-2 px-3 border border-primary text-primary rounded bg-white fw-bold">A</div>
+                  <div class="p-2 px-3 border border-primary text-primary rounded bg-white fw-bold">B</div>
+                  <div class="p-2 px-3 border border-primary text-primary rounded bg-white fw-bold">C</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">align-items + flex-direction</div>
+              <div class="card-body bg-light">
+                <p class="text-muted mb-2">
+                  .d-flex .flex-column .align-items-center
+                </p>
+                <div
+                  class="border p-3 rounded bg-white d-flex flex-column align-items-center gap-2"
+                >
+                  <div class="p-2 px-3 border border-primary text-primary rounded bg-white fw-bold">primero</div>
+                  <div class="p-2 px-3 border border-primary text-primary rounded bg-white fw-bold">segundo</div>
+                  <div class="p-2 px-3 border border-primary text-primary rounded bg-white fw-bold">tercero</div>
+                </div>
+              </div>
+              <div class="card-footer p-0">
+                <pre
+                  class="bg-secondary text-light p-3 m-0"
+                ><code>&lt;div class="d-flex justify-content-between align-items-center"&gt;
+    &lt;span&gt;Izquierda&lt;/span&gt;
+    &lt;span&gt;Derecha&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+
+          <article id="gap" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Gap</h2>
+            <p class="mb-3">
+              Para separar items dentro de un flex o grid sin tener que tocar
+              márgenes hijo por hijo. La escala es la misma que la de spacing.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">.gap-1 hasta .gap-5</div>
+              <div class="card-body bg-light">
+                <p class="text-muted mb-2">.gap-1</p>
+                <div class="border p-3 rounded bg-white d-flex gap-1 mb-3">
+                  <div class="p-2 px-3 border border-primary text-primary rounded bg-white fw-bold">A</div>
+                  <div class="p-2 px-3 border border-primary text-primary rounded bg-white fw-bold">B</div>
+                  <div class="p-2 px-3 border border-primary text-primary rounded bg-white fw-bold">C</div>
+                </div>
+                <p class="text-muted mb-2">.gap-3</p>
+                <div class="border p-3 rounded bg-white d-flex gap-3 mb-3">
+                  <div class="p-2 px-3 border border-primary text-primary rounded bg-white fw-bold">A</div>
+                  <div class="p-2 px-3 border border-primary text-primary rounded bg-white fw-bold">B</div>
+                  <div class="p-2 px-3 border border-primary text-primary rounded bg-white fw-bold">C</div>
+                </div>
+                <p class="text-muted mb-2">.gap-5</p>
+                <div class="border p-3 rounded bg-white d-flex gap-5">
+                  <div class="p-2 px-3 border border-primary text-primary rounded bg-white fw-bold">A</div>
+                  <div class="p-2 px-3 border border-primary text-primary rounded bg-white fw-bold">B</div>
+                  <div class="p-2 px-3 border border-primary text-primary rounded bg-white fw-bold">C</div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article id="bordes" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Bordes</h2>
+            <p class="mb-3">
+              <code>.border</code> aplica un borde gris suave en los cuatro
+              lados. También hay <code>.border-top</code>,
+              <code>.border-bottom</code>, <code>.border-start</code>,
+              <code>.border-end</code> y los modificadores de color
+              <code>.border-{color}</code>.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Vista previa</div>
+              <div class="card-body bg-light">
+                <div class="row">
+                  <div class="col-6 col-md-4 px-2 mb-3">
+                    <div class="border p-3 bg-white">.border</div>
+                  </div>
+                  <div class="col-6 col-md-4 px-2 mb-3">
+                    <div class="border border-primary p-3 bg-white">
+                      .border .border-primary
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-4 px-2 mb-3">
+                    <div class="border border-success p-3 bg-white">
+                      .border .border-success
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-4 px-2 mb-3">
+                    <div class="border-bottom p-3 bg-white">
+                      .border-bottom
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-4 px-2 mb-3">
+                    <div class="border-start p-3 bg-white">.border-start</div>
+                  </div>
+                  <div class="col-6 col-md-4 px-2 mb-3">
+                    <div class="border border-danger p-3 bg-white">
+                      .border .border-danger
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article id="redondeo" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Redondeado</h2>
+            <p class="mb-3">
+              Cinco escalones de redondeo más dos formas especiales:
+              <code>.rounded-pill</code> (cápsula) y
+              <code>.rounded-circle</code> (círculo perfecto).
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Vista previa</div>
+              <div class="card-body bg-light">
+                <div class="d-flex flex-wrap gap-3">
+                  <div
+                    class="bg-primary text-white p-3 rounded-sm text-center"
+                  >
+                    rounded-sm
+                  </div>
+                  <div
+                    class="bg-primary text-white p-3 rounded"
+                  >
+                    rounded
+                  </div>
+                  <div
+                    class="bg-primary text-white p-3 rounded-lg"
+                  >
+                    rounded-lg
+                  </div>
+                  <div
+                    class="bg-primary text-white p-3 rounded-xl"
+                  >
+                    rounded-xl
+                  </div>
+                  <div
+                    class="bg-primary text-white py-2 px-4 rounded-pill"
+                  >
+                    rounded-pill
+                  </div>
+                  <div
+                    class="bg-primary text-white d-flex justify-content-center align-items-center rounded-circle"
+                    style="width: 70px; height: 70px;"
+                  >
+                    circle
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer p-0">
+                <pre
+                  class="bg-secondary text-light p-3 m-0"
+                ><code>&lt;div class="rounded-lg"&gt;...&lt;/div&gt;
+&lt;span class="badge badge-pill"&gt;Tag&lt;/span&gt;
+&lt;img class="rounded-circle" src="..."&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+
+          <article id="sombras">
+            <h2 class="fs-2 fw-bold mb-3">Sombras</h2>
+            <p class="mb-3">
+              Cuatro niveles para dar elevación. Se ven mejor sobre fondos
+              claros o cards.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Niveles</div>
+              <div class="card-body bg-light">
+                <div class="row">
+                  <div class="col-6 col-md-3 px-2 mb-3">
+                    <div class="bg-white p-4 rounded text-center shadow-none"><code>.shadow-none</code></div>
+                  </div>
+                  <div class="col-6 col-md-3 px-2 mb-3">
+                    <div class="bg-white p-4 rounded text-center shadow-sm"><code>.shadow-sm</code></div>
+                  </div>
+                  <div class="col-6 col-md-3 px-2 mb-3">
+                    <div class="bg-white p-4 rounded text-center shadow-md"><code>.shadow-md</code></div>
+                  </div>
+                  <div class="col-6 col-md-3 px-2 mb-3">
+                    <div class="bg-white p-4 rounded text-center shadow-lg"><code>.shadow-lg</code></div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer p-0">
+                <pre
+                  class="bg-secondary text-light p-3 m-0"
+                ><code>&lt;div class="card shadow-md"&gt;...&lt;/div&gt;
+&lt;div class="card shadow-lg"&gt;...&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-dark text-light py-4 mt-5">
+      <div class="container text-center">
+        <p class="m-0">HellgarUI © · 2026</p>
+      </div>
+    </footer>
+  </body>
+</html>

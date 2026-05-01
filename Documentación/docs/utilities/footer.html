@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Footers · HellgarUI</title>
+    <link rel="icon" href="../icon/hellgar-icon.png" type="image/png" />
+    <link rel="stylesheet" href="../../scss/main.css" />
+  </head>
+  <body class="bg-light">
+        <nav class="navbar">
+      <a href="/index.html" class="navbar-brand">HellgarUI</a>
+
+      <input type="checkbox" id="main-nav-toggle" class="navbar-toggle" />
+      <label
+        for="main-nav-toggle"
+        class="navbar-toggler"
+        aria-label="Abrir menú"
+      >
+        <span></span><span></span><span></span>
+      </label>
+
+      <ul class="navbar-nav">
+        <li><a href="/index.html" class="navbar-link">Inicio</a></li>
+        <li><a href="grid.html" class="navbar-link">Grid</a></li>
+        <li><a href="buttons.html" class="navbar-link">Botones</a></li>
+        <li><a href="cards.html" class="navbar-link">Cards</a></li>
+        <li><a href="alerts.html" class="navbar-link">Alerts</a></li>
+        <li><a href="forms.html" class="navbar-link">Forms</a></li>
+        <li><a href="tables.html" class="navbar-link">Tablas</a></li>
+        <li><a href="colors.html" class="navbar-link">Colores</a></li>
+        <li><a href="typography.html" class="navbar-link">Tipografía</a></li>
+        <li><a href="spacing.html" class="navbar-link">Spacing</a></li>
+        <li><a href="utilities.html" class="navbar-link">Utilidades</a></li>
+        <li><a href="badges.html" class="navbar-link">Badges</a></li>
+        <li><a href="../utilities/navbar.html" class="navbar-link">Navbars</a></li>
+        <li><a href="../utilities/footer.html" class="navbar-link active">Footers</a></li>
+      </ul>
+    </nav>
+
+    <header class="bg-secondary py-5">
+      <div class="container">
+        <span class="badge badge-primary mb-2">componente</span>
+        <h1 class="fs-1 fw-bold text-white m-0">Footers (Pie de página)</h1>
+        <p class="fs-5 text-light m-0">
+          Estructuras flexibles para el final de tus páginas. Soportan múltiples columnas, enlaces de interés y variantes de color.
+        </p>
+      </div>
+    </header>
+
+    <main class="container py-5">
+      <div class="row">
+        <aside class="col-12 col-md-3 mb-4">
+          <div class="card shadow-sm">
+            <div class="card-header">En esta página</div>
+            <div class="card-body">
+              <ul class="d-flex flex-column gap-2">
+                <li><a href="#dark" class="navbar-link text-dark">Footer Base (Dark)</a></li>
+                <li><a href="#light" class="navbar-link text-dark">Footer Light</a></li>
+                <li><a href="#secondary" class="navbar-link text-dark">Footer Secondary</a></li>
+                <li><a href="#simple" class="navbar-link text-dark">Footer Simple</a></li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+
+        <div class="col-12 col-md-9">
+          
+          <article id="dark" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Footer Base (Dark)</h2>
+            <p class="mb-3">
+              Por defecto, el componente <code>.footer</code> utiliza el color <code>$dark</code>. Utiliza la estructura interna <code>.footer-row</code> y <code>.footer-col</code> para distribuir el contenido de forma responsiva.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Vista previa</div>
+              <div class="card-body p-0">
+                <footer class="footer">
+                  <div class="footer-row">
+                    <div class="footer-col">
+                      <div class="footer-brand">HellgarUI</div>
+                      <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">
+                        Un framework ardiente y siniestro diseñado para la web moderna.
+                      </p>
+                    </div>
+                    <div class="footer-col">
+                      <h4 class="footer-title">Recursos</h4>
+                      <ul class="footer-links">
+                        <li><a href="#">Documentación</a></li>
+                        <li><a href="#">Componentes</a></li>
+                        <li><a href="#">Github Repo</a></li>
+                      </ul>
+                    </div>
+                    <div class="footer-col">
+                      <h4 class="footer-title">Comunidad</h4>
+                      <ul class="footer-links">
+                        <li><a href="#">Discord</a></li>
+                        <li><a href="#">Twitter (X)</a></li>
+                        <li><a href="#">Blog</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="footer-bottom">
+                    <span>&copy; 2026 HellgarUI. Todos los derechos reservados.</span>
+                    <span>Creado para Herramientas de Productividad.</span>
+                  </div>
+                </footer>
+              </div>
+              <div class="card-footer p-0">
+<pre class="bg-secondary text-light p-3 m-0"><code>&lt;footer class="footer"&gt;
+  &lt;div class="footer-row"&gt;
+    &lt;div class="footer-col"&gt;
+      &lt;div class="footer-brand"&gt;HellgarUI&lt;/div&gt;
+      &lt;p&gt;...&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="footer-col"&gt;
+      &lt;h4 class="footer-title"&gt;Enlaces&lt;/h4&gt;
+      &lt;ul class="footer-links"&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="footer-bottom"&gt;
+    &lt;span&gt;&copy; 2026 HellgarUI&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+
+          <article id="light" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Footer Light</h2>
+            <p class="mb-3">
+              Agrega la clase modificadora <code>.footer-light</code> junto a <code>.footer</code> para invertir los colores y utilizar la variable <code>$light</code>. Ideal para diseños de fondo blanco donde quieres mantener la limpieza visual.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Vista previa</div>
+              <div class="card-body p-0 border-bottom">
+                <footer class="footer footer-light">
+                  <div class="footer-row">
+                    <div class="footer-col">
+                      <div class="footer-brand">Pokedex Web</div>
+                      <p style="color: rgba(0,0,0,0.6); font-size: 0.9rem;">
+                        Toda la información sobre tipo Fuego.
+                      </p>
+                    </div>
+                    <div class="footer-col">
+                      <h4 class="footer-title">Legal</h4>
+                      <ul class="footer-links">
+                        <li><a href="#">Términos de Uso</a></li>
+                        <li><a href="#">Privacidad</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="footer-bottom">
+                    <span>&copy; 2026 Pokedex Corp.</span>
+                  </div>
+                </footer>
+              </div>
+              <div class="card-footer p-0">
+<pre class="bg-secondary text-light p-3 m-0"><code>&lt;footer class="footer footer-light"&gt;
+  &lt;!-- Mismo contenido interno --&gt;
+&lt;/footer&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+
+          <article id="secondary" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Footer Secondary</h2>
+            <p class="mb-3">
+              Usando <code>.footer-secondary</code> aplicamos un gris oscuro diferente al <code>$dark</code> absoluto, dando una jerarquía visual un poco más suave.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Vista previa</div>
+              <div class="card-body p-0">
+                <footer class="footer footer-secondary">
+                  <div class="footer-row">
+                    <div class="footer-col">
+                      <h4 class="footer-title">Contacto</h4>
+                      <ul class="footer-links">
+                        <li><a href="#">soportehellgar@gmail.com</a></li>
+                        <li><a href="#">+503 2000-0000</a></li>
+                      </ul>
+                    </div>
+                    <div class="footer-col">
+                      <h4 class="footer-title">Redes</h4>
+                      <ul class="footer-links">
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </footer>
+              </div>
+              <div class="card-footer p-0">
+<pre class="bg-secondary text-light p-3 m-0"><code>&lt;footer class="footer footer-secondary"&gt;
+  &lt;!-- Contenido --&gt;
+&lt;/footer&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+
+          <article id="simple" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Footer Minimalista</h2>
+            <p class="mb-3">
+              No es obligatorio usar toda la cuadrícula. Puedes omitir <code>.footer-row</code> y utilizar solo la clase base para crear un footer pequeño y centrado. Para alinear el texto, puedes apoyarte en tus clases utilitarias[cite: 21].
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Vista previa</div>
+              <div class="card-body p-0">
+                <footer class="footer text-center">
+                  <div class="footer-brand justify-content-center">HellgarUI</div>
+                  <p class="m-0" style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">
+                    Diseñado con &hearts; por el equipo Siniestro <br>(Fernando, Bairon e Isaú).
+                  </p>
+                </footer>
+              </div>
+              <div class="card-footer p-0">
+<pre class="bg-secondary text-light p-3 m-0"><code>&lt;footer class="footer text-center"&gt;
+  &lt;div class="footer-brand"&gt;HellgarUI&lt;/div&gt;
+  &lt;p class="m-0"&gt;Diseñado con &hearts;&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container text-center">
+        <p class="m-0">HellgarUI © · 2026</p>
+      </div>
+    </footer>
+  </body>
+</html>

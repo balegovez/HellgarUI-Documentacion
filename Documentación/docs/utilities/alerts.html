@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alerts · HellgarUI</title>
+    <link rel="icon" href="../icon/hellgar-icon.png" type="image/png" />
+    <link rel="stylesheet" href="/HellgarUI/scss/main.css" />
+  </head>
+  <body class="bg-light">
+    <nav class="navbar">
+      <a href="/index.html" class="navbar-brand">HellgarUI</a>
+
+      <input type="checkbox" id="main-nav-toggle" class="navbar-toggle" />
+      <label
+        for="main-nav-toggle"
+        class="navbar-toggler"
+        aria-label="Abrir menú"
+      >
+        <span></span><span></span><span></span>
+      </label>
+
+      <ul class="navbar-nav">
+        <li><a href="/index.html" class="navbar-link">Inicio</a></li>
+        <li><a href="grid.html" class="navbar-link">Grid</a></li>
+        <li><a href="buttons.html" class="navbar-link">Botones</a></li>
+        <li><a href="cards.html" class="navbar-link">Cards</a></li>
+        <li><a href="alerts.html" class="navbar-link active">Alerts</a></li>
+        <li><a href="forms.html" class="navbar-link">Forms</a></li>
+        <li><a href="tables.html" class="navbar-link">Tablas</a></li>
+        <li><a href="colors.html" class="navbar-link">Colores</a></li>
+        <li><a href="typography.html" class="navbar-link">Tipografía</a></li>
+        <li><a href="spacing.html" class="navbar-link">Spacing</a></li>
+        <li><a href="utilities.html" class="navbar-link">Utilidades</a></li>
+        <li><a href="badges.html" class="navbar-link">Badges</a></li>
+        <li><a href="../utilities/navbar.html" class="navbar-link">Navbars</a></li>
+        <li><a href="../utilities/footer.html" class="navbar-link">Footers</a></li>
+      </ul>
+    </nav>
+
+    <header class="bg-secondary py-5">
+      <div class="container">
+        <span class="badge badge-primary mb-2">componente</span>
+        <h1 class="fs-1 fw-bold text-white m-0">Alerts</h1>
+        <p class="fs-5 text-light m-0">
+          Mensajes contextuales para feedback rápido al usuario.
+        </p>
+      </div>
+    </header>
+
+    <main class="container py-5">
+      <div class="row">
+        <aside class="col-12 col-md-3 mb-4">
+          <div class="card shadow-sm">
+            <div class="card-header">En esta página</div>
+            <div class="card-body">
+              <ul class="d-flex flex-column gap-2">
+                <li>
+                  <a href="#basica" class="navbar-link text-dark"
+                    >Alerta base</a
+                  >
+                </li>
+                <li>
+                  <a href="#variantes" class="navbar-link text-dark"
+                    >Variantes</a
+                  >
+                </li>
+                <li>
+                  <a href="#contenido" class="navbar-link text-dark"
+                    >Con titulo</a
+                  >
+                </li>
+                <li>
+                  <a href="#enlaces" class="navbar-link text-dark"
+                    >Con enlaces</a
+                  >
+                </li>
+                <li>
+                  <a href="#combinada" class="navbar-link text-dark"
+                    >Combinaciones</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+
+        <div class="col-12 col-md-9">
+          <article id="basica" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Alerta básica</h2>
+            <p class="mb-3">
+              La clase base es <code>.alert</code>, pero sola no muestra
+              colores. Le tenes que sumar una variante semantica:
+              <code>.alert-success</code>, <code>.alert-danger</code>,
+              <code>.alert-warning</code> o <code>.alert-info</code>.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Vista previa</div>
+              <div class="card-body bg-light">
+                <div class="alert alert-success">
+                  Operación completada con éxito.
+                </div>
+              </div>
+              <div class="card-footer p-0">
+                <pre
+                  class="bg-secondary text-light p-3 m-0"
+                ><code>&lt;div class="alert alert-success"&gt;
+    Operación completada con éxito.
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+
+          <article id="variantes" class="mb-5">
+            <!-- ojo, no hay alert-primary ni alert-secondary. solo las 4 semanticas -->
+            <h2 class="fs-2 fw-bold mb-3">Las 4 variantes</h2>
+            <p class="mb-3">
+              Cada variante esta pensada para un tipo de mensaje distinto. Verde
+              para confirmar, rojo para errores, amarillo para advertencias y
+              azul para info neutral.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Todas juntas</div>
+              <div class="card-body bg-light">
+                <div class="alert alert-success">
+                  <strong>Éxito:</strong> los cambios se guardaron.
+                </div>
+                <div class="alert alert-danger">
+                  <strong>Error:</strong> no se pudo conectar con el servidor.
+                </div>
+                <div class="alert alert-warning">
+                  <strong>Atención:</strong> tu sesión expira en 2 minutos.
+                </div>
+                <div class="alert alert-info">
+                  <strong>Info:</strong> hay una nueva versión disponible.
+                </div>
+              </div>
+              <div class="card-footer p-0">
+                <pre
+                  class="bg-secondary text-light p-3 m-0"
+                ><code>&lt;div class="alert alert-success"&gt;Éxito&lt;/div&gt;
+&lt;div class="alert alert-danger"&gt;Error&lt;/div&gt;
+&lt;div class="alert alert-warning"&gt;Atención&lt;/div&gt;
+&lt;div class="alert alert-info"&gt;Info&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+
+          <article id="contenido" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Alerta con título y descripción</h2>
+            <p class="mb-3">
+              Adentro de la alerta podes usar headings y parrafos. Combinalos
+              con utilidades de tipografia y spacing para darle estructura.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Mas contenido adentro</div>
+              <div class="card-body bg-light">
+                <div class="alert alert-warning">
+                  <h4 class="fs-5 fw-bold mb-2">Cuidado con esto</h4>
+                  <p class="m-0">
+                    Estas a punto de borrar tu cuenta. Esta acción no se puede
+                    deshacer ni llorando.
+                  </p>
+                </div>
+              </div>
+              <div class="card-footer p-0">
+                <pre
+                  class="bg-secondary text-light p-3 m-0"
+                ><code>&lt;div class="alert alert-warning"&gt;
+    &lt;h4 class="fs-5 fw-bold mb-2"&gt;Cuidado con esto&lt;/h4&gt;
+    &lt;p class="m-0"&gt;
+        Estas a punto de borrar tu cuenta.
+    &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+
+          <article id="enlaces" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Alertas con enlaces</h2>
+            <p class="mb-3">
+              Si necesitas agregar un link adentro de la alerta, le podes meter
+              un <code>&lt;a&gt;</code> con utilidades de tipografía como
+              <code>fw-bold</code> para que se note bien.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Con call to action</div>
+              <div class="card-body bg-light">
+                <div class="alert alert-info">
+                  Hay actualizaciones pendientes.
+                  <a href="#" class="fw-bold">Ver detalles</a>
+                </div>
+              </div>
+              <div class="card-footer p-0">
+                <pre
+                  class="bg-secondary text-light p-3 m-0"
+                ><code>&lt;div class="alert alert-info"&gt;
+    Hay actualizaciones pendientes.
+    &lt;a href="#" class="fw-bold"&gt;Ver detalles&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+
+          <article id="combinada">
+            <h2 class="fs-2 fw-bold mb-3">Combinada con otros componentes</h2>
+            <p class="mb-3">
+              Dentro de un <code>card-body</code>, una alerta queda muy bien
+              para mostrar un estado sobre un formulario o una accion. Tambien
+              podes ponerle un boton al lado.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Alerta con acción</div>
+              <div class="card-body bg-light">
+                <div class="alert alert-danger">
+                  <div
+                    class="d-flex justify-content-between align-items-center flex-wrap gap-2"
+                  >
+                    <span>
+                      <strong>Conexión perdida.</strong> No se pudo guardar el
+                      formulario.
+                    </span>
+                    <button class="btn btn-danger btn-sm">Reintentar</button>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer p-0">
+                <pre
+                  class="bg-secondary text-light p-3 m-0"
+                ><code>&lt;div class="alert alert-danger"&gt;
+    &lt;div class="d-flex justify-content-between align-items-center flex-wrap gap-2"&gt;
+        &lt;span&gt;&lt;strong&gt;Conexión perdida.&lt;/strong&gt; No se pudo guardar.&lt;/span&gt;
+        &lt;button class="btn btn-danger btn-sm"&gt;Reintentar&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-dark text-light py-4 mt-5">
+      <div class="container text-center">
+        <p class="m-0">HellgarUI © · 2026</p>
+      </div>
+    </footer>
+  </body>
+</html>

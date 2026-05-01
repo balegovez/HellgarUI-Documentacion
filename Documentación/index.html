@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HellgarUI · Documentación oficial</title>
+    <link rel="icon" href="../docs/icon/hellgar-icon.png" type="image/png" />
+    <link rel="stylesheet" href="/HellgarUI/scss/main.css" />
+  </head>
+
+  <body class="bg-light">
+    <nav class="navbar">
+      <a href="../index.html" class="navbar-brand">HellgarUI</a>
+
+      <input type="checkbox" id="main-nav-toggle" class="navbar-toggle" />
+      <label
+        for="main-nav-toggle"
+        class="navbar-toggler"
+        aria-label="Abrir menú"
+      >
+        <span></span><span></span><span></span>
+      </label>
+
+      <ul class="navbar-nav">
+        <li><a href="./index.html" class="navbar-link active">Inicio</a></li>
+        <li><a href="./HellgarUI/docs/utilities/grid.html" class="navbar-link">Grid</a></li>
+        <li><a href="./docs/utilities/buttons.html" class="navbar-link">Botones</a></li>
+        <li><a href="./docs/utilities/cards.html" class="navbar-link">Cards</a></li>
+        <li><a href="./docs/utilities/alerts.html" class="navbar-link">Alerts</a></li>
+        <li><a href="./docs/utilities/forms.html" class="navbar-link">Forms</a></li>
+        <li><a href="./docs/utilities/tables.html" class="navbar-link">Tablas</a></li>
+        <li><a href="./docs/utilities/colors.html" class="navbar-link">Colores</a></li>
+        <li><a href="./docs/utilities/typography.html" class="navbar-link">Tipografía</a></li>
+        <li><a href="./docs/utilities/spacing.html" class="navbar-link">Spacing</a></li>
+        <li><a href="./docs/utilities/utilities.html" class="navbar-link">Utilidades</a></li>
+        <li><a href="./docs/utilities/badges.html" class="navbar-link">Badges</a></li>
+        <li><a href="./docs/utilities/navbar.html" class="navbar-link">Navbars</a></li>
+        <li><a href="./docs/utilities/footer.html" class="navbar-link">Footers</a></li>
+      </ul>
+    </nav>
+
+    <section class="bg-secondary py-5">
+      <div class="container py-5">
+        <div class="row align-items-center">
+          <div class="col-12 col-md-7 py-3">
+            <span class="badge badge-primary mb-3">v1.0 · siniestro/fuego</span>
+            <h1 class="fs-1 fw-black text-white mb-3">HellgarUI</h1>
+            <p class="fs-5 text-light mb-4">
+              Un framework CSS pequeño, brutal y mobile-first. Pensado para que
+              armes interfaces rápido sin pelearte con clases que no recuerdas.
+            </p>
+            <div class="d-flex gap-3 flex-wrap">
+              <a href="/HellgarUI/docs/utilities/grid.html" class="btn btn-primary"
+                >Empezar con el grid</a
+              >
+              <a href="../docs/utilities/buttons.html" class="btn btn-secondary"
+                >Ver componentes</a
+              >
+            </div>
+          </div>
+          <div class="col-12 col-md-5 py-3">
+            <div class="card shadow-md">
+              <div class="card-header bg-primary text-white">
+                paleta oficial
+              </div>
+              <div class="card-body">
+                <div class="d-flex gap-2 mb-2">
+                  <span class="badge badge-primary">primary</span>
+                  <span class="badge badge-secondary">secondary</span>
+                  <span class="badge badge-accent">accent</span>
+                </div>
+                <p class="text-muted m-0">
+                  Inspirado en Houndoom. Rojo Houndoom, negro carbón y un
+                  naranja brasa.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main class="container py-5">
+      <div class="row">
+        <aside class="col-12 col-md-3 mb-4">
+          <div class="card shadow-sm">
+            <div class="card-header">En esta página</div>
+            <div class="card-body">
+              <ul class="d-flex flex-column gap-2">
+                <li>
+                  <a href="#que-es" class="navbar-link text-dark">Qué es</a>
+                </li>
+                <li>
+                  <a href="#instalacion" class="navbar-link text-dark"
+                    >Instalación</a
+                  >
+                </li>
+                <li>
+                  <a href="#filosofia" class="navbar-link text-dark"
+                    >Filosofía</a
+                  >
+                </li>
+                <li>
+                  <a href="#mapa" class="navbar-link text-dark"
+                    >Mapa de páginas</a
+                  >
+                </li>
+                <li>
+                  <a href="#novedades" class="navbar-link text-dark"
+                    >Novedades v1.0</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+
+        <div class="col-12 col-md-8">
+          <article id="que-es" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">¿Qué es HellgarUI?</h2>
+            <p class="fs-6 mb-3">
+              HellgarUI es un framework CSS construido en SASS, con una
+              arquitectura modular dividida en base, layout, components y
+              utilities. Si vienes de Bootstrap te vas a sentir cómodo: 12
+              columnas, breakpoints sm/md/lg/xl/xxl, utilidades de spacing y un
+              sistema de colores semántico.
+            </p>
+            <p class="fs-6">
+              La diferencia es que es chiquito, sin JavaScript y con una
+              identidad visual propia (rojo, negro y naranja).
+            </p>
+          </article>
+
+          <article id="instalacion" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Instalación</h2>
+            <p class="mb-3">
+              Solo enlaza el <code>main.css</code> compilado en el
+              <code>head</code> de tu HTML y listo. No hay paquetes, no hay
+              build steps obligatorios para el usuario final.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Paso 1 · Enlazar el CSS</div>
+              <div class="card-body p-0">
+                <pre
+                  class="bg-secondary text-light p-3 m-0 rounded-bottom"
+                ><code>&lt;link rel="stylesheet" href="main.css"&gt;</code></pre>
+              </div>
+            </div>
+
+            <div class="card shadow-sm">
+              <div class="card-header">Paso 2 · Primer "hola mundo"</div>
+              <div class="card-body p-0">
+                <pre
+                  class="bg-secondary text-light p-3 m-0 rounded-bottom"
+                ><code>&lt;div class="container py-5"&gt;
+    &lt;h1 class="fs-1 text-primary"&gt;¡Hola Mundo!&lt;/h1&gt;
+    &lt;button class="btn btn-primary"&gt;Botón de prueba&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+
+          <article id="filosofia" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Filosofía</h2>
+
+            <div class="row">
+              <div class="col-12 col-md-4 mb-3 px-2">
+                <div class="card shadow-sm h-100">
+                  <div class="card-body text-center">
+                    <div class="fs-1 mb-2">📱</div>
+                    <h3 class="fs-5 fw-bold">Mobile first</h3>
+                    <p class="text-muted m-0">
+                      Todas las clases base aplican primero a móvil y se
+                      expanden hacia arriba con los breakpoints.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-4 mb-3 px-2">
+                <div class="card shadow-sm h-100">
+                  <div class="card-body text-center">
+                    <div class="fs-1 mb-2">🧩</div>
+                    <h3 class="fs-5 fw-bold">Modular</h3>
+                    <p class="text-muted m-0">
+                      Carga solo lo que vayas a usar editando el main.scss. No
+                      infles el CSS sin razón.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-4 mb-3 px-2">
+                <div class="card shadow-sm h-100">
+                  <div class="card-body text-center">
+                    <div class="fs-1 mb-2">😎</div>
+                    <h3 class="fs-5 fw-bold">Personalidad</h3>
+                    <p class="text-muted m-0">
+                      Los colores no son aburridos. Tampoco la documentación
+                      (eso esperamos).
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article id="mapa">
+            <h2 class="fs-2 fw-bold mb-3">Mapa de páginas</h2>
+            <div class="row">
+              <div class="col-12 col-md-6 mb-3 px-2">
+                <a href="../docs/utilities/grid.html" class="card shadow-sm d-block">
+                  <div class="card-body">
+                    <h3 class="fs-5 fw-bold text-primary mb-2">
+                      Sistema de grid →
+                    </h3>
+                    <p class="text-muted m-0">
+                      Container, row y 12 columnas responsivas. La base de todo.
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-12 col-md-6 mb-3">
+                <a href="../docs/utilities/buttons.html" class="card shadow-sm d-block">
+                  <div class="card-body">
+                    <h3 class="fs-5 fw-bold text-primary mb-2">Botones →</h3>
+                    <p class="text-muted m-0">
+                      Variantes primarias, secundarias y semánticas listas para
+                      usar.
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-12 col-md-6 mb-3 px-2">
+                <a href="../docs/utilities/cards.html" class="card shadow-sm d-block">
+                  <div class="card-body">
+                    <h3 class="fs-5 fw-bold text-primary mb-2">Cards →</h3>
+                    <p class="text-muted m-0">
+                      Header, body, footer, imágenes, todo combinable.
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-12 col-md-6 mb-3">
+                <a href="../docs/utilities/alerts.html" class="card shadow-sm d-block">
+                  <div class="card-body">
+                    <h3 class="fs-5 fw-bold text-primary mb-2">Alerts →</h3>
+                    <p class="text-muted m-0">
+                      Mensajes de éxito y peligro para feedback rápido.
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-12 col-md-6 mb-3 px-2">
+                <a href="../docs/utilities/forms.html" class="card shadow-sm d-block">
+                  <div class="card-body">
+                    <h3 class="fs-5 fw-bold text-primary mb-2">Forms →</h3>
+                    <p class="text-muted m-0">
+                      Inputs, validaciones, switch, input-group y modo cebra.
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-12 col-md-6 mb-3">
+                <a href="../docs/utilities/tables.html" class="card shadow-sm d-block">
+                  <div class="card-body">
+                    <h3 class="fs-5 fw-bold text-primary mb-2">Tablas →</h3>
+                    <p class="text-muted m-0">
+                      Tablas con header, hover y borde opcional.
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-12 col-md-6 mb-3 px-2">
+                <a href="../docs/utilities/colors.html" class="card shadow-sm d-block">
+                  <div class="card-body">
+                    <h3 class="fs-5 fw-bold text-primary mb-2">Colores →</h3>
+                    <p class="text-muted m-0">
+                      Paleta oficial: marca, semánticos y neutrales.
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-12 col-md-6 mb-3">
+                <a href="../docs/utilities/typography.html" class="card shadow-sm d-block">
+                  <div class="card-body">
+                    <h3 class="fs-5 fw-bold text-primary mb-2">Tipografía →</h3>
+                    <p class="text-muted m-0">
+                      Tamaños, pesos, alineaciones y decoraciones.
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-12 col-md-6 mb-3 px-2">
+                <a href="../docs/utilities/spacing.html" class="card shadow-sm d-block">
+                  <div class="card-body">
+                    <h3 class="fs-5 fw-bold text-primary mb-2">Spacing →</h3>
+                    <p class="text-muted m-0">
+                      Margin y padding responsivos en una escala de 6 pasos.
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-12 col-md-6 mb-3">
+                <a href="../docs/utilities/utilities.html" class="card shadow-sm d-block">
+                  <div class="card-body">
+                    <h3 class="fs-5 fw-bold text-primary mb-2">Utilidades →</h3>
+                    <p class="text-muted m-0">
+                      Display, flexbox, bordes, redondeados y sombras.
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-12 col-md-6 mb-3 px-2">
+                <a href="../docs/utilities/badges.html" class="card shadow-sm d-block">
+                  <div class="card-body">
+                    <h3 class="fs-5 fw-bold text-primary mb-2">Badges →</h3>
+                    <p class="text-muted m-0">
+                      Etiquetas para estados, contadores y categorías.
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </main>
+
+    <footer class="bg-dark text-light py-4 mt-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-md-6 text-center">
+            <p class="m-0">HellgarUI © · 2026</p>
+          </div>
+          <div class="col-12 col-md-6 text-center">
+            <span class="badge badge-pill badge-accent">v1.0</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

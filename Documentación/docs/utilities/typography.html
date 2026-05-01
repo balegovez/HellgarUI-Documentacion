@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tipografía · HellgarUI</title>
+    <link rel="icon" href="../icon/hellgar-icon.png" type="image/png" />
+    <link rel="stylesheet" href="/HellgarUI/scss/main.css" />
+  </head>
+  <body class="bg-light">
+    <nav class="navbar">
+      <a href="/index.html" class="navbar-brand">HellgarUI</a>
+
+      <input type="checkbox" id="main-nav-toggle" class="navbar-toggle" />
+      <label
+        for="main-nav-toggle"
+        class="navbar-toggler"
+        aria-label="Abrir menú"
+      >
+        <span></span><span></span><span></span>
+      </label>
+
+      <ul class="navbar-nav">
+        <li><a href="/index.html" class="navbar-link">Inicio</a></li>
+        <li><a href="grid.html" class="navbar-link">Grid</a></li>
+        <li><a href="buttons.html" class="navbar-link">Botones</a></li>
+        <li><a href="cards.html" class="navbar-link">Cards</a></li>
+        <li><a href="alerts.html" class="navbar-link">Alerts</a></li>
+        <li><a href="forms.html" class="navbar-link">Forms</a></li>
+        <li><a href="tables.html" class="navbar-link">Tablas</a></li>
+        <li><a href="colors.html" class="navbar-link">Colores</a></li>
+        <li><a href="typography.html" class="navbar-link active">Tipografía</a></li>
+        <li><a href="spacing.html" class="navbar-link">Spacing</a></li>
+        <li><a href="utilities.html" class="navbar-link">Utilidades</a></li>
+        <li><a href="badges.html" class="navbar-link">Badges</a></li>
+        <li><a href="../utilities/navbar.html" class="navbar-link">Navbars</a></li>
+        <li><a href="../utilities/footer.html" class="navbar-link">Footers</a></li>
+      </ul>
+    </nav>
+
+    <header class="bg-secondary py-5">
+      <div class="container">
+        <span class="badge badge-primary mb-2">utilidad</span>
+        <h1 class="fs-1 fw-bold text-white m-0">Tipografía</h1>
+        <p class="fs-5 text-light m-0">
+          Tamaños, pesos, alineaciones, decoraciones y demás utilidades de
+          texto.
+        </p>
+      </div>
+    </header>
+
+    <main class="container py-5">
+      <div class="row">
+        <aside class="col-12 col-md-3 mb-4">
+          <div class="card shadow-sm">
+            <div class="card-header">En esta página</div>
+            <div class="card-body">
+              <ul class="d-flex flex-column gap-2">
+                <li>
+                  <a href="#fuente" class="navbar-link text-dark"
+                    >Fuente base</a
+                  >
+                </li>
+                <li>
+                  <a href="#tamanos" class="navbar-link text-dark"
+                    >Tamaños (fs-*)</a
+                  >
+                </li>
+                <li>
+                  <a href="#pesos" class="navbar-link text-dark"
+                    >Pesos (fw-*)</a
+                  >
+                </li>
+                <li>
+                  <a href="#alineacion" class="navbar-link text-dark"
+                    >Alineación</a
+                  >
+                </li>
+                <li>
+                  <a href="#transformacion" class="navbar-link text-dark"
+                    >Transformación</a
+                  >
+                </li>
+                <li>
+                  <a href="#decoracion" class="navbar-link text-dark"
+                    >Decoración</a
+                  >
+                </li>
+                <li>
+                  <a href="#linea" class="navbar-link text-dark"
+                    >Altura de línea</a
+                  >
+                </li>
+                <li>
+                  <a href="#extras" class="navbar-link text-dark"
+                    >Truncado e itálica</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+
+        <div class="col-12 col-md-9">
+          <article id="fuente" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Fuente base</h2>
+            <p class="mb-3">
+              HellgarUI usa una stack de sistema (<code>Segoe UI</code>,
+              <code>Roboto</code>, <code>Helvetica</code>,
+              <code>Arial</code>, sans-serif) para verse nativo en cada SO sin
+              cargar ningún archivo. El tamaño base es 16px y el color de texto
+              por defecto es el <code>$dark</code> (#121212).
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Vista previa</div>
+              <div class="card-body bg-light">
+                <p class="m-0">
+                  Esta es una línea de texto en la fuente y tamaño base de
+                  HellgarUI. Todo lo demás se construye encima de esto.
+                </p>
+              </div>
+              <div class="card-footer p-0">
+                <pre
+                  class="bg-secondary text-light p-3 m-0"
+                ><code>$font-family-base: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+$font-size-base: 16px;</code></pre>
+              </div>
+            </div>
+          </article>
+
+          <article id="tamanos" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Tamaños (fs-*)</h2>
+            <p class="mb-3">
+              Seis escalones, del 1 (más grande) al 6 (texto base). Coinciden
+              con la jerarquía de los <code>h1</code>–<code>h6</code> pero
+              podés aplicarlos a cualquier elemento.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Escala completa</div>
+              <div class="card-body bg-light">
+                <p class="fs-1 m-0">fs-1 · 2.5rem</p>
+                <p class="fs-2 m-0">fs-2 · 2rem</p>
+                <p class="fs-3 m-0">fs-3 · 1.75rem</p>
+                <p class="fs-4 m-0">fs-4 · 1.5rem</p>
+                <p class="fs-5 m-0">fs-5 · 1.25rem</p>
+                <p class="fs-6 m-0">fs-6 · 1rem</p>
+              </div>
+              <div class="card-footer p-0">
+                <pre
+                  class="bg-secondary text-light p-3 m-0"
+                ><code>&lt;p class="fs-1"&gt;Título grande&lt;/p&gt;
+&lt;p class="fs-6"&gt;Texto base&lt;/p&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+
+          <article id="pesos" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Pesos (fw-*)</h2>
+            <p class="mb-3">
+              Seis pesos disponibles. <code>.fw-black</code> es el más fuerte y
+              se ve genial en titulares. <code>.fw-light</code> sirve para
+              subtítulos.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Pesos</div>
+              <div class="card-body bg-light">
+                <p class="fs-4 fw-light m-0">fw-light · 300</p>
+                <p class="fs-4 fw-normal m-0">fw-normal · 400</p>
+                <p class="fs-4 fw-medium m-0">fw-medium · 500</p>
+                <p class="fs-4 fw-semibold m-0">fw-semibold · 600</p>
+                <p class="fs-4 fw-bold m-0">fw-bold · 700</p>
+                <p class="fs-4 fw-black m-0">fw-black · 900</p>
+              </div>
+              <div class="card-footer p-0">
+                <pre
+                  class="bg-secondary text-light p-3 m-0"
+                ><code>&lt;h1 class="fs-1 fw-black"&gt;Título potente&lt;/h1&gt;
+&lt;p class="fw-medium"&gt;Texto con un toque de peso&lt;/p&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+
+          <article id="alineacion" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Alineación</h2>
+            <p class="mb-3">
+              Cuatro opciones: <code>.text-start</code>,
+              <code>.text-center</code>, <code>.text-end</code> y
+              <code>.text-justify</code>.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Vista previa</div>
+              <div class="card-body bg-light">
+                <p class="text-start mb-2">
+                  text-start · Esto está alineado al inicio.
+                </p>
+                <p class="text-center mb-2">
+                  text-center · Esto está centrado.
+                </p>
+                <p class="text-end mb-2">
+                  text-end · Esto está alineado al final.
+                </p>
+                <p class="text-justify m-0">
+                  text-justify · Lorem ipsum dolor sit amet, consectetur
+                  adipiscing elit. Esta línea se justifica para que ambos
+                  márgenes queden parejos en bloques largos de texto como
+                  artículos o párrafos formales.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article id="transformacion" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Transformación</h2>
+            <p class="mb-3">
+              Cambiá entre minúsculas, mayúsculas o capitalizado sin tocar el
+              HTML.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Vista previa</div>
+              <div class="card-body bg-light">
+                <p class="text-lowercase fw-medium m-0">
+                  text-lowercase · TODO esto Está EN MINÚSCULAS
+                </p>
+                <p class="text-uppercase fw-medium m-0">
+                  text-uppercase · todo esto está en mayúsculas
+                </p>
+                <p class="text-capitalize fw-medium m-0">
+                  text-capitalize · cada palabra empieza con mayúscula
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article id="decoracion" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Decoración</h2>
+            <p class="mb-3">
+              Para subrayados, tachados o quitar la decoración por defecto a
+              los enlaces.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Vista previa</div>
+              <div class="card-body bg-light">
+                <p class="text-decoration-underline fw-medium m-0">
+                  text-decoration-underline · esta línea va subrayada
+                </p>
+                <p class="text-decoration-line-through fw-medium m-0">
+                  text-decoration-line-through · esta va tachada
+                </p>
+                <p class="m-0">
+                  <a
+                    href="#decoracion"
+                    class="text-decoration-none text-primary fw-medium"
+                    >text-decoration-none · enlace sin subrayado</a
+                  >
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article id="linea" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Altura de línea</h2>
+            <p class="mb-3">
+              Cuatro presets para ajustar el espaciado vertical entre líneas
+              de un mismo bloque de texto.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Vista previa</div>
+              <div class="card-body bg-light">
+                <p class="lh-1 mb-3">
+                  lh-1 · Lorem ipsum dolor sit amet consectetur adipiscing
+                  elit. Las líneas quedan súper pegadas, útil para botones y
+                  badges.
+                </p>
+                <p class="lh-sm mb-3">
+                  lh-sm · Lorem ipsum dolor sit amet consectetur adipiscing
+                  elit. Espaciado un poco más amable.
+                </p>
+                <p class="lh-base mb-3">
+                  lh-base · Lorem ipsum dolor sit amet consectetur adipiscing
+                  elit. Es el valor por defecto, ideal para textos largos.
+                </p>
+                <p class="lh-lg m-0">
+                  lh-lg · Lorem ipsum dolor sit amet consectetur adipiscing
+                  elit. Mucho aire entre líneas, queda elegante en hero
+                  sections.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article id="extras">
+            <h2 class="fs-2 fw-bold mb-3">Truncado e itálica</h2>
+            <p class="mb-3">
+              Dos utilidades sueltas pero muy usadas:
+              <code>.text-truncate</code> para cortar texto largo con puntos
+              suspensivos y <code>.fst-italic</code> para itálicas.
+            </p>
+
+            <div class="card shadow-sm">
+              <div class="card-header">Vista previa</div>
+              <div class="card-body bg-light">
+                <div
+                  class="text-truncate mb-3"
+                  style="max-width: 280px; border: 1px dashed rgba(0,0,0,0.2); padding: 0.5rem; border-radius: 4px;"
+                >
+                  Este texto es bastante largo y no debería caber, así que se
+                  corta con puntos.
+                </div>
+                <p class="fst-italic m-0">
+                  fst-italic · una cita o palabra remarcada en cursiva.
+                </p>
+              </div>
+              <div class="card-footer p-0">
+                <pre
+                  class="bg-secondary text-light p-3 m-0"
+                ><code>&lt;div class="text-truncate" style="max-width: 280px;"&gt;Texto largo...&lt;/div&gt;
+&lt;span class="fst-italic"&gt;cursiva&lt;/span&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-dark text-light py-4 mt-5">
+      <div class="container text-center">
+        <p class="m-0">HellgarUI © · 2026</p>
+      </div>
+    </footer>
+  </body>
+</html>

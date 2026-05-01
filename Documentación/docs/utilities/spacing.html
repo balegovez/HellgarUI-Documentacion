@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spacing · HellgarUI</title>
+    <link rel="icon" href="../icon/hellgar-icon.png" type="image/png" />
+    <link rel="stylesheet" href="/HellgarUI/scss/main.css" />
+  </head>
+  <body class="bg-light">
+    <nav class="navbar">
+      <a href="/index.html" class="navbar-brand">HellgarUI</a>
+
+      <input type="checkbox" id="main-nav-toggle" class="navbar-toggle" />
+      <label
+        for="main-nav-toggle"
+        class="navbar-toggler"
+        aria-label="Abrir menú"
+      >
+        <span></span><span></span><span></span>
+      </label>
+
+      <ul class="navbar-nav">
+        <li><a href="/index.html" class="navbar-link">Inicio</a></li>
+        <li><a href="grid.html" class="navbar-link">Grid</a></li>
+        <li><a href="buttons.html" class="navbar-link">Botones</a></li>
+        <li><a href="cards.html" class="navbar-link">Cards</a></li>
+        <li><a href="alerts.html" class="navbar-link">Alerts</a></li>
+        <li><a href="forms.html" class="navbar-link">Forms</a></li>
+        <li><a href="tables.html" class="navbar-link">Tablas</a></li>
+        <li><a href="colors.html" class="navbar-link">Colores</a></li>
+        <li><a href="typography.html" class="navbar-link">Tipografía</a></li>
+        <li><a href="spacing.html" class="navbar-link active">Spacing</a></li>
+        <li><a href="utilities.html" class="navbar-link">Utilidades</a></li>
+        <li><a href="badges.html" class="navbar-link">Badges</a></li>
+        <li>
+          <a href="../utilities/navbar.html" class="navbar-link">Navbars</a>
+        </li>
+        <li>
+          <a href="../utilities/footer.html" class="navbar-link">Footers</a>
+        </li>
+      </ul>
+    </nav>
+
+    <header class="bg-secondary py-5">
+      <div class="container">
+        <span class="badge badge-primary mb-2">utilidad</span>
+        <h1 class="fs-1 fw-bold text-white m-0">Spacing</h1>
+        <p class="fs-5 text-light m-0">
+          Margen, padding y direcciones · sistema responsivo de 6 escalones.
+        </p>
+      </div>
+    </header>
+
+    <main class="container py-5">
+      <div class="row">
+        <aside class="col-12 col-md-3 mb-4">
+          <div class="card shadow-sm">
+            <div class="card-header">En esta página</div>
+            <div class="card-body">
+              <ul class="d-flex flex-column gap-2">
+                <li>
+                  <a href="#escala" class="navbar-link text-dark">La escala</a>
+                </li>
+                <li>
+                  <a href="#sintaxis" class="navbar-link text-dark">Sintaxis</a>
+                </li>
+                <li>
+                  <a href="#padding" class="navbar-link text-dark">Padding</a>
+                </li>
+                <li>
+                  <a href="#margin" class="navbar-link text-dark">Margin</a>
+                </li>
+                <li>
+                  <a href="#ejes" class="navbar-link text-dark">Ejes (x, y)</a>
+                </li>
+                <li>
+                  <a href="#responsivo" class="navbar-link text-dark"
+                    >Responsivo</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+
+        <div class="col-12 col-md-9">
+          <article id="escala" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">La escala</h2>
+            <p class="mb-3">
+              El sistema se basa en seis pasos calculados a partir del
+              <code>$spacer</code> base (1rem = 16px). Sirve igual para padding
+              y para margin.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Valores</div>
+              <div class="card-body p-0">
+                <table class="table m-0">
+                  <thead>
+                    <tr>
+                      <th>Token</th>
+                      <th>Multiplicador</th>
+                      <th>rem</th>
+                      <th>px</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0px</td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>0.25</td>
+                      <td>0.25rem</td>
+                      <td>4px</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>0.5</td>
+                      <td>0.5rem</td>
+                      <td>8px</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>1</td>
+                      <td>1rem</td>
+                      <td>16px</td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>1.5</td>
+                      <td>1.5rem</td>
+                      <td>24px</td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>3</td>
+                      <td>3rem</td>
+                      <td>48px</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </article>
+
+          <article id="sintaxis" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Sintaxis</h2>
+            <p class="mb-3">
+              El patrón es <code>{propiedad}{lado}-{tamaño}</code> y
+              opcionalmente
+              <code>{propiedad}{lado}-{breakpoint}-{tamaño}</code> para
+              responsivo.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Atajos</div>
+              <div class="card-body bg-light">
+                <ul class="m-0" style="padding-left: 1.2rem">
+                  <li><code>m</code> = margin · <code>p</code> = padding</li>
+                  <li>
+                    <code>t</code> = top · <code>b</code> = bottom ·
+                    <code>s</code> = start (left) · <code>e</code> = end (right)
+                  </li>
+                  <li>
+                    <code>x</code> = horizontal (start + end) · <code>y</code> =
+                    vertical (top + bottom)
+                  </li>
+                  <li>
+                    Sin sufijo de lado: aplica a los cuatro (ej.
+                    <code>p-3</code>, <code>m-4</code>).
+                  </li>
+                </ul>
+              </div>
+              <div class="card-footer p-0">
+                <pre
+                  class="bg-secondary text-light p-3 m-0"
+                ><code>&lt;div class="p-3"&gt;padding 1rem en los 4 lados&lt;/div&gt;
+&lt;div class="mt-4"&gt;margin-top 1.5rem&lt;/div&gt;
+&lt;div class="px-5 py-2"&gt;padding horizontal 3rem y vertical 0.5rem&lt;/div&gt;
+&lt;div class="mb-md-4"&gt;margin-bottom 1.5rem desde el breakpoint md&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+
+          <article id="padding" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Padding</h2>
+            <p class="mb-3">
+              <code>.p-0</code> hasta <code>.p-5</code> sobre los cuatro lados.
+              Las cajas de adentro muestran cuánto crece el padding.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Vista previa</div>
+              <div class="card-body bg-light">
+                <div
+                  class="mb-2 p-1"
+                  style="
+                    background: rgba(229, 57, 53, 0.08);
+                    border: 1px dashed rgba(229, 57, 53, 0.5);
+                    border-radius: 4px;
+                  "
+                >
+                  <div
+                    class="text-white text-center"
+                    style="
+                      background: rgba(33, 33, 33, 0.85);
+                      font-family:
+                        ui-monospace, SFMono-Regular, Consolas, monospace;
+                      font-size: 0.85rem;
+                    "
+                  >
+                    .p-1 · 0.25rem
+                  </div>
+                </div>
+                <div
+                  class="mb-2 p-2"
+                  style="
+                    background: rgba(229, 57, 53, 0.08);
+                    border: 1px dashed rgba(229, 57, 53, 0.5);
+                    border-radius: 4px;
+                  "
+                >
+                  <div
+                    class="text-white text-center"
+                    style="
+                      background: rgba(33, 33, 33, 0.85);
+                      font-family:
+                        ui-monospace, SFMono-Regular, Consolas, monospace;
+                      font-size: 0.85rem;
+                    "
+                  >
+                    .p-2 · 0.5rem
+                  </div>
+                </div>
+                <div
+                  class="mb-2 p-3"
+                  style="
+                    background: rgba(229, 57, 53, 0.08);
+                    border: 1px dashed rgba(229, 57, 53, 0.5);
+                    border-radius: 4px;
+                  "
+                >
+                  <div
+                    class="text-white text-center"
+                    style="
+                      background: rgba(33, 33, 33, 0.85);
+                      font-family:
+                        ui-monospace, SFMono-Regular, Consolas, monospace;
+                      font-size: 0.85rem;
+                    "
+                  >
+                    .p-3 · 1rem
+                  </div>
+                </div>
+                <div
+                  class="mb-2 p-4"
+                  style="
+                    background: rgba(229, 57, 53, 0.08);
+                    border: 1px dashed rgba(229, 57, 53, 0.5);
+                    border-radius: 4px;
+                  "
+                >
+                  <div
+                    class="text-white text-center"
+                    style="
+                      background: rgba(33, 33, 33, 0.85);
+                      font-family:
+                        ui-monospace, SFMono-Regular, Consolas, monospace;
+                      font-size: 0.85rem;
+                    "
+                  >
+                    .p-4 · 1.5rem
+                  </div>
+                </div>
+                <div
+                  class="p-5"
+                  style="
+                    background: rgba(229, 57, 53, 0.08);
+                    border: 1px dashed rgba(229, 57, 53, 0.5);
+                    border-radius: 4px;
+                  "
+                >
+                  <div
+                    class="text-white text-center"
+                    style="
+                      background: rgba(33, 33, 33, 0.85);
+                      font-family:
+                        ui-monospace, SFMono-Regular, Consolas, monospace;
+                      font-size: 0.85rem;
+                    "
+                  >
+                    .p-5 · 3rem
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article id="margin" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Margin</h2>
+            <p class="mb-3">
+              Mismo sistema pero hacia afuera. Útil para separar bloques o
+              tarjetas.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">
+                Vista previa · separación entre bloques
+              </div>
+              <div class="card-body bg-light">
+                <div
+                  class="p-2"
+                  style="
+                    background: rgba(229, 57, 53, 0.06);
+                    border: 1px dashed rgba(229, 57, 53, 0.3);
+                    border-radius: 4px;
+                  "
+                >
+                  <div
+                    class="mb-1 text-white text-center p-2"
+                    style="
+                      background: rgba(33, 33, 33, 0.85);
+                      font-family:
+                        ui-monospace, SFMono-Regular, Consolas, monospace;
+                      font-size: 0.85rem;
+                      border-radius: 4px;
+                    "
+                  >
+                    .mb-1
+                  </div>
+                  <div
+                    class="mb-2 text-white text-center p-2"
+                    style="
+                      background: rgba(33, 33, 33, 0.85);
+                      font-family:
+                        ui-monospace, SFMono-Regular, Consolas, monospace;
+                      font-size: 0.85rem;
+                      border-radius: 4px;
+                    "
+                  >
+                    .mb-2
+                  </div>
+                  <div
+                    class="mb-3 text-white text-center p-2"
+                    style="
+                      background: rgba(33, 33, 33, 0.85);
+                      font-family:
+                        ui-monospace, SFMono-Regular, Consolas, monospace;
+                      font-size: 0.85rem;
+                      border-radius: 4px;
+                    "
+                  >
+                    .mb-3
+                  </div>
+                  <div
+                    class="mb-4 text-white text-center p-2"
+                    style="
+                      background: rgba(33, 33, 33, 0.85);
+                      font-family:
+                        ui-monospace, SFMono-Regular, Consolas, monospace;
+                      font-size: 0.85rem;
+                      border-radius: 4px;
+                    "
+                  >
+                    .mb-4
+                  </div>
+                  <div
+                    class="text-white text-center p-2"
+                    style="
+                      background: rgba(33, 33, 33, 0.85);
+                      font-family:
+                        ui-monospace, SFMono-Regular, Consolas, monospace;
+                      font-size: 0.85rem;
+                      border-radius: 4px;
+                    "
+                  >
+                    sin margin · final
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article id="ejes" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Ejes horizontal y vertical</h2>
+            <p class="mb-3">
+              Para evitar tener que escribir dos clases, usá
+              <code>x</code> (izquierda + derecha) y <code>y</code> (arriba +
+              abajo).
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Vista previa</div>
+              <div class="card-body bg-light">
+                <div
+                  class="mb-2 px-4 py-2"
+                  style="
+                    background: rgba(229, 57, 53, 0.08);
+                    border: 1px dashed rgba(229, 57, 53, 0.5);
+                    border-radius: 4px;
+                  "
+                >
+                  <div
+                    class="text-white text-center"
+                    style="
+                      background: rgba(33, 33, 33, 0.85);
+                      font-family:
+                        ui-monospace, SFMono-Regular, Consolas, monospace;
+                      font-size: 0.85rem;
+                    "
+                  >
+                    .px-4 .py-2
+                  </div>
+                </div>
+                <div
+                  class="px-2 py-4"
+                  style="
+                    background: rgba(229, 57, 53, 0.08);
+                    border: 1px dashed rgba(229, 57, 53, 0.5);
+                    border-radius: 4px;
+                  "
+                >
+                  <div
+                    class="text-white text-center"
+                    style="
+                      background: rgba(33, 33, 33, 0.85);
+                      font-family:
+                        ui-monospace, SFMono-Regular, Consolas, monospace;
+                      font-size: 0.85rem;
+                    "
+                  >
+                    .px-2 .py-4
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer p-0">
+                <pre
+                  class="bg-secondary text-light p-3 m-0"
+                ><code>&lt;div class="px-4 py-2"&gt;Ancho con padding y poco vertical&lt;/div&gt;
+&lt;div class="mx-3 my-5"&gt;Márgenes en los dos ejes&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+
+          <article id="responsivo">
+            <h2 class="fs-2 fw-bold mb-3">Responsivo</h2>
+            <p class="mb-3">
+              Cualquier clase de spacing acepta un breakpoint en el medio:
+              <code>sm</code>, <code>md</code>, <code>lg</code>,
+              <code>xl</code>, <code>xxl</code>. La regla aplica desde ese ancho
+              hacia arriba (mobile-first).
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Idea</div>
+              <div class="card-body bg-light">
+                <p class="m-0">
+                  Si un bloque debe tener poco padding en mobile y bastante en
+                  desktop, lo escribís así:
+                </p>
+              </div>
+              <div class="card-footer p-0">
+                <pre
+                  class="bg-secondary text-light p-3 m-0"
+                ><code>&lt;div class="p-2 p-md-4 p-lg-5"&gt;
+    Padding crece a medida que la pantalla crece.
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+
+            <div class="card shadow-sm">
+              <div class="card-header">Demo en vivo</div>
+              <div class="card-body bg-light">
+                <div
+                  class="p-2 p-md-4 p-lg-5"
+                  style="
+                    background: rgba(229, 57, 53, 0.08);
+                    border: 1px dashed rgba(229, 57, 53, 0.5);
+                    border-radius: 4px;
+                  "
+                >
+                  <div
+                    class="text-white text-center"
+                    style="
+                      background: rgba(33, 33, 33, 0.85);
+                      font-family:
+                        ui-monospace, SFMono-Regular, Consolas, monospace;
+                      font-size: 0.85rem;
+                    "
+                  >
+                    p-2 en mobile · p-md-4 desde 768px · p-lg-5 desde 992px
+                  </div>
+                </div>
+                <p class="text-muted mt-2 m-0">
+                  Achicá la ventana del navegador para ver cómo cambia el
+                  padding.
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-dark text-light py-4 mt-5">
+      <div class="container text-center">
+        <p class="m-0">HellgarUI © · 2026</p>
+      </div>
+    </footer>
+  </body>
+</html>

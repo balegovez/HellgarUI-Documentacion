@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colores · HellgarUI</title>
+    <link rel="icon" href="../icon/hellgar-icon.png" type="image/png" />
+    <link rel="stylesheet" href="/HellgarUI/scss/main.css" />
+  </head>
+  <body class="bg-light">
+    <nav class="navbar">
+      <a href="/index.html" class="navbar-brand">HellgarUI</a>
+
+      <input type="checkbox" id="main-nav-toggle" class="navbar-toggle" />
+      <label
+        for="main-nav-toggle"
+        class="navbar-toggler"
+        aria-label="Abrir menú"
+      >
+        <span></span><span></span><span></span>
+      </label>
+
+      <ul class="navbar-nav">
+        <li><a href="/index.html" class="navbar-link">Inicio</a></li>
+        <li><a href="grid.html" class="navbar-link">Grid</a></li>
+        <li><a href="buttons.html" class="navbar-link">Botones</a></li>
+        <li><a href="cards.html" class="navbar-link">Cards</a></li>
+        <li><a href="alerts.html" class="navbar-link">Alerts</a></li>
+        <li><a href="forms.html" class="navbar-link">Forms</a></li>
+        <li><a href="tables.html" class="navbar-link">Tablas</a></li>
+        <li><a href="colors.html" class="navbar-link active">Colores</a></li>
+        <li><a href="typography.html" class="navbar-link">Tipografía</a></li>
+        <li><a href="spacing.html" class="navbar-link">Spacing</a></li>
+        <li><a href="utilities.html" class="navbar-link">Utilidades</a></li>
+        <li><a href="badges.html" class="navbar-link">Badges</a></li>
+        <li><a href="../utilities/navbar.html" class="navbar-link">Navbars</a></li>
+        <li><a href="../utilities/footer.html" class="navbar-link">Footers</a></li>
+      </ul>
+    </nav>
+
+    <header class="bg-secondary py-5">
+      <div class="container">
+        <span class="badge badge-primary mb-2">utilidad</span>
+        <h1 class="fs-1 fw-bold text-white m-0">Colores</h1>
+        <p class="fs-5 text-light m-0">
+          Paleta oficial de HellgarUI: marca, semánticos y neutrales. Listos
+          para usar en texto y fondos.
+        </p>
+      </div>
+    </header>
+
+    <main class="container py-5">
+      <div class="row">
+        <aside class="col-12 col-md-3 mb-4">
+          <div class="card shadow-sm">
+            <div class="card-header">En esta página</div>
+            <div class="card-body">
+              <ul class="d-flex flex-column gap-2">
+                <li>
+                  <a href="#paleta" class="navbar-link text-dark"
+                    >Paleta principal</a
+                  >
+                </li>
+                <li>
+                  <a href="#semanticos" class="navbar-link text-dark"
+                    >Colores semánticos</a
+                  >
+                </li>
+                <li>
+                  <a href="#texto" class="navbar-link text-dark"
+                    >Clases de texto</a
+                  >
+                </li>
+                <li>
+                  <a href="#fondos" class="navbar-link text-dark"
+                    >Clases de fondo</a
+                  >
+                </li>
+                <li>
+                  <a href="#contraste" class="navbar-link text-dark"
+                    >Auto-contraste</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+
+        <div class="col-12 col-md-9">
+          <article id="paleta" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Paleta principal</h2>
+            <p class="mb-3">
+              Tres colores de marca, inspirados en Houndoom (siniestro/fuego):
+              un rojo intenso, un negro carbón y un naranja brasa. Más dos
+              neutrales (claro y oscuro) que se usan como fondo y texto base.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Marca</div>
+              <div class="card-body bg-light">
+                <div class="row">
+                  <div class="col-12 col-md-4 mb-3 px-2">
+                    <div
+                      class="bg-primary text-white d-flex align-items-end p-3 rounded shadow-sm fw-semibold"
+                      style="height: 100px"
+                    >
+                      primary
+                    </div>
+                    <div
+                      class="text-muted mt-1"
+                      style="
+                        font-family:
+                          ui-monospace, SFMono-Regular, Consolas, monospace;
+                        font-size: 0.85rem;
+                      "
+                    >
+                      $primary · #E53935
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4 mb-3 px-2">
+                    <div
+                      class="bg-secondary text-white d-flex align-items-end p-3 rounded shadow-sm fw-semibold"
+                      style="height: 100px"
+                    >
+                      secondary
+                    </div>
+                    <div
+                      class="text-muted mt-1"
+                      style="
+                        font-family:
+                          ui-monospace, SFMono-Regular, Consolas, monospace;
+                        font-size: 0.85rem;
+                      "
+                    >
+                      $secondary · #212121
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4 mb-3 px-2">
+                    <div
+                      class="bg-accent d-flex align-items-end p-3 rounded shadow-sm fw-semibold"
+                      style="height: 100px"
+                    >
+                      accent
+                    </div>
+                    <div
+                      class="text-muted mt-1"
+                      style="
+                        font-family:
+                          ui-monospace, SFMono-Regular, Consolas, monospace;
+                        font-size: 0.85rem;
+                      "
+                    >
+                      $accent · #FF9800
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card shadow-sm">
+              <div class="card-header">Neutrales</div>
+              <div class="card-body bg-light">
+                <div class="row">
+                  <div class="col-12 col-md-6 mb-3 px-2">
+                    <div
+                      class="bg-light border d-flex align-items-end p-3 rounded shadow-sm fw-semibold"
+                      style="height: 100px"
+                    >
+                      light
+                    </div>
+                    <div
+                      class="text-muted mt-1"
+                      style="
+                        font-family:
+                          ui-monospace, SFMono-Regular, Consolas, monospace;
+                        font-size: 0.85rem;
+                      "
+                    >
+                      $light · #F5F5F5
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 mb-3 px-2">
+                    <div
+                      class="bg-dark text-white d-flex align-items-end p-3 rounded shadow-sm fw-semibold"
+                      style="height: 100px"
+                    >
+                      dark
+                    </div>
+                    <div
+                      class="text-muted mt-1"
+                      style="
+                        font-family:
+                          ui-monospace, SFMono-Regular, Consolas, monospace;
+                        font-size: 0.85rem;
+                      "
+                    >
+                      $dark · #121212
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article id="semanticos" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Colores semánticos</h2>
+            <p class="mb-3">
+              Cuatro colores con significado fijo: éxito, peligro, advertencia e
+              información. Se usan en alertas, badges, validaciones y cualquier
+              feedback visual donde el color tiene que comunicar algo concreto.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Estado del sistema</div>
+              <div class="card-body bg-light">
+                <div class="row">
+                  <div class="col-6 col-md-3 mb-3 px-2">
+                    <div
+                      class="bg-success text-white d-flex align-items-end p-3 rounded shadow-sm fw-semibold"
+                      style="height: 100px"
+                    >
+                      success
+                    </div>
+                    <div
+                      class="text-muted mt-1"
+                      style="
+                        font-family:
+                          ui-monospace, SFMono-Regular, Consolas, monospace;
+                        font-size: 0.85rem;
+                      "
+                    >
+                      #43A047
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-3 mb-3 px-2">
+                    <div
+                      class="bg-danger text-white d-flex align-items-end p-3 rounded shadow-sm fw-semibold"
+                      style="height: 100px"
+                    >
+                      danger
+                    </div>
+                    <div
+                      class="text-muted mt-1"
+                      style="
+                        font-family:
+                          ui-monospace, SFMono-Regular, Consolas, monospace;
+                        font-size: 0.85rem;
+                      "
+                    >
+                      #D32F2F
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-3 mb-3 px-2">
+                    <div
+                      class="bg-warning d-flex align-items-end p-3 rounded shadow-sm fw-semibold"
+                      style="height: 100px"
+                    >
+                      warning
+                    </div>
+                    <div
+                      class="text-muted mt-1"
+                      style="
+                        font-family:
+                          ui-monospace, SFMono-Regular, Consolas, monospace;
+                        font-size: 0.85rem;
+                      "
+                    >
+                      #FBC02D
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-3 mb-3 px-2">
+                    <div
+                      class="bg-info text-white d-flex align-items-end p-3 rounded shadow-sm fw-semibold"
+                      style="height: 100px"
+                    >
+                      info
+                    </div>
+                    <div
+                      class="text-muted mt-1"
+                      style="
+                        font-family:
+                          ui-monospace, SFMono-Regular, Consolas, monospace;
+                        font-size: 0.85rem;
+                      "
+                    >
+                      #1E88E5
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer p-0">
+                <pre
+                  class="bg-secondary text-light p-3 m-0"
+                ><code>&lt;div class="alert alert-success"&gt;...&lt;/div&gt;
+&lt;div class="alert alert-danger"&gt;...&lt;/div&gt;
+&lt;span class="badge badge-warning"&gt;atención&lt;/span&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+
+          <article id="texto" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Clases de texto</h2>
+            <p class="mb-3">
+              Para pintar el color de un texto sumá la clase
+              <code>.text-{nombre}</code>. Funciona con cualquier color de la
+              paleta y con los semánticos.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Vista previa</div>
+              <div class="card-body bg-light">
+                <p class="text-primary fw-bold m-0">
+                  Texto en text-primary (rojo Houndoom).
+                </p>
+                <p class="text-secondary fw-bold m-0">
+                  Texto en text-secondary (negro carbón).
+                </p>
+                <p class="text-accent fw-bold m-0">
+                  Texto en text-accent (naranja brasa).
+                </p>
+                <p class="text-success fw-bold m-0">Texto en text-success.</p>
+                <p class="text-danger fw-bold m-0">Texto en text-danger.</p>
+                <p class="text-warning fw-bold m-0">Texto en text-warning.</p>
+                <p class="text-info fw-bold m-0">Texto en text-info.</p>
+                <p class="text-muted m-0">
+                  Texto en text-muted (gris suave para información secundaria).
+                </p>
+              </div>
+              <div class="card-footer p-0">
+                <pre
+                  class="bg-secondary text-light p-3 m-0"
+                ><code>&lt;p class="text-primary"&gt;...&lt;/p&gt;
+&lt;p class="text-success"&gt;...&lt;/p&gt;
+&lt;p class="text-muted"&gt;...&lt;/p&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+
+          <article id="fondos" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Clases de fondo</h2>
+            <p class="mb-3">
+              Para fondos usá <code>.bg-{nombre}</code>. Se aplica a cualquier
+              elemento (sections, cards, divs). Notá que el texto se ajusta
+              automáticamente, ver la sección de auto-contraste.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Vista previa</div>
+              <div class="card-body bg-light">
+                <div class="bg-primary p-3 mb-2 rounded">.bg-primary</div>
+                <div class="bg-secondary p-3 mb-2 rounded">.bg-secondary</div>
+                <div class="bg-accent p-3 mb-2 rounded">.bg-accent</div>
+                <div class="bg-success p-3 mb-2 rounded">.bg-success</div>
+                <div class="bg-danger p-3 mb-2 rounded">.bg-danger</div>
+                <div class="bg-warning p-3 mb-2 rounded">.bg-warning</div>
+                <div class="bg-info p-3 mb-2 rounded">.bg-info</div>
+                <div class="bg-light p-3 mb-2 rounded border">.bg-light</div>
+                <div class="bg-dark p-3 rounded">.bg-dark</div>
+              </div>
+            </div>
+          </article>
+
+          <article id="contraste">
+            <h2 class="fs-2 fw-bold mb-3">Auto-contraste</h2>
+            <p class="mb-3">
+              Los colores con fondo oscuro (primary, secondary, success, danger,
+              info, dark) ya aplican color de texto claro automáticamente. No
+              tenés que sumar <code>.text-white</code>. Si querés forzar otro
+              color, simplemente sobreescribilo con la clase explícita.
+            </p>
+
+            <div class="card shadow-sm">
+              <div class="card-header">Ejemplo</div>
+              <div class="card-body bg-light">
+                <div class="bg-primary p-3 mb-2 rounded">
+                  Sin clase de texto: blanco automático.
+                </div>
+                <div class="bg-primary text-warning p-3 mb-2 rounded">
+                  Con .text-warning: el sistema respeta tu override.
+                </div>
+                <div class="bg-light p-3 rounded border">
+                  Fondos claros: texto oscuro automático.
+                </div>
+              </div>
+              <div class="card-footer p-0">
+                <pre
+                  class="bg-secondary text-light p-3 m-0"
+                ><code>&lt;div class="bg-primary"&gt;Texto blanco automático&lt;/div&gt;
+&lt;div class="bg-primary text-warning"&gt;Override manual&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-dark text-light py-4 mt-5">
+      <div class="container text-center">
+        <p class="m-0">HellgarUI © · 2026</p>
+      </div>
+    </footer>
+  </body>
+</html>

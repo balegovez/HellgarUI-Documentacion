@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Botones · HellgarUI</title>
+    <link rel="icon" href="../icon/hellgar-icon.png" type="image/png" />
+    <link rel="stylesheet" href="/HellgarUI/scss/main.css" />
+  </head>
+  <body class="bg-light">
+    <nav class="navbar">
+      <a href="/index.html" class="navbar-brand">HellgarUI</a>
+
+      <input type="checkbox" id="main-nav-toggle" class="navbar-toggle" />
+      <label
+        for="main-nav-toggle"
+        class="navbar-toggler"
+        aria-label="Abrir menú"
+      >
+        <span></span><span></span><span></span>
+      </label>
+
+      <ul class="navbar-nav">
+        <li><a href="/index.html" class="navbar-link">Inicio</a></li>
+        <li><a href="grid.html" class="navbar-link">Grid</a></li>
+        <li><a href="buttons.html" class="navbar-link active">Botones</a></li>
+        <li><a href="cards.html" class="navbar-link">Cards</a></li>
+        <li><a href="alerts.html" class="navbar-link">Alerts</a></li>
+        <li><a href="forms.html" class="navbar-link">Forms</a></li>
+        <li><a href="tables.html" class="navbar-link">Tablas</a></li>
+        <li><a href="colors.html" class="navbar-link">Colores</a></li>
+        <li><a href="typography.html" class="navbar-link">Tipografía</a></li>
+        <li><a href="spacing.html" class="navbar-link">Spacing</a></li>
+        <li><a href="utilities.html" class="navbar-link">Utilidades</a></li>
+        <li><a href="badges.html" class="navbar-link">Badges</a></li>
+        <li><a href="../utilities/navbar.html" class="navbar-link">Navbars</a></li>
+        <li><a href="../utilities/footer.html" class="navbar-link">Footers</a></li>
+      </ul>
+    </nav>
+
+    <header class="bg-secondary py-5">
+      <div class="container">
+        <span class="badge badge-primary mb-2">componente</span>
+        <h1 class="fs-1 fw-bold text-white m-0">Botones</h1>
+        <p class="fs-5 text-light m-0">
+          Variantes solidas, outline y tamaños. Todo basado en la paleta del
+          tema.
+        </p>
+      </div>
+    </header>
+
+    <main class="container py-5">
+      <div class="row">
+        <aside class="col-12 col-md-3 mb-4">
+          <div class="card shadow-sm">
+            <div class="card-header">En esta página</div>
+            <div class="card-body">
+              <ul class="d-flex flex-column gap-2">
+                <li>
+                  <a href="#basico" class="navbar-link text-dark">Básico</a>
+                </li>
+                <li>
+                  <a href="#variantes" class="navbar-link text-dark"
+                    >Variantes</a
+                  >
+                </li>
+                <li>
+                  <a href="#outline" class="navbar-link text-dark">Outline</a>
+                </li>
+                <li>
+                  <a href="#tamanos" class="navbar-link text-dark">Tamaños</a>
+                </li>
+                <li>
+                  <a href="#bloque" class="navbar-link text-dark"
+                    >Botón bloque</a
+                  >
+                </li>
+                <li>
+                  <a href="#enlaces" class="navbar-link text-dark"
+                    >Como enlace</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+
+        <div class="col-12 col-md-9">
+          <article id="basico" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Botón básico</h2>
+            <p class="mb-3">
+              La clase <code>.btn</code> sola es la base. Le tiras un
+              modificador de color y ya tenes el botón listo. Sirve tanto en
+              <code>&lt;button&gt;</code> como en <code>&lt;a&gt;</code>.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Vista previa</div>
+              <div class="card-body">
+                <button class="btn btn-primary">Botón primario</button>
+              </div>
+              <div class="card-footer p-0">
+                <pre
+                  class="bg-secondary text-light p-3 m-0"
+                ><code>&lt;button class="btn btn-primary"&gt;Botón primario&lt;/button&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+
+          <article id="variantes" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Variantes de color</h2>
+            <p class="mb-3">
+              HellgarUI genera automaticamente un botón por cada color del tema.
+              Así que tenes <code>primary</code>, <code>secondary</code>,
+              <code>success</code>, <code>danger</code>, <code>warning</code>,
+              <code>info</code>, <code>light</code> y <code>dark</code>.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Todos los colores</div>
+              <div class="card-body">
+                <div class="d-flex flex-wrap gap-2">
+                  <button class="btn btn-primary">primary</button>
+                  <button class="btn btn-secondary">secondary</button>
+                  <button class="btn btn-success">success</button>
+                  <button class="btn btn-danger">danger</button>
+                  <button class="btn btn-warning">warning</button>
+                  <button class="btn btn-info">info</button>
+                  <button class="btn btn-light">light</button>
+                  <button class="btn btn-dark">dark</button>
+                </div>
+              </div>
+              <div class="card-footer p-0">
+                <pre
+                  class="bg-secondary text-light p-3 m-0"
+                ><code>&lt;button class="btn btn-primary"&gt;primary&lt;/button&gt;
+&lt;button class="btn btn-secondary"&gt;secondary&lt;/button&gt;
+&lt;button class="btn btn-success"&gt;success&lt;/button&gt;
+&lt;button class="btn btn-danger"&gt;danger&lt;/button&gt;
+&lt;button class="btn btn-warning"&gt;warning&lt;/button&gt;
+&lt;button class="btn btn-info"&gt;info&lt;/button&gt;
+&lt;button class="btn btn-light"&gt;light&lt;/button&gt;
+&lt;button class="btn btn-dark"&gt;dark&lt;/button&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+
+          <article id="outline" class="mb-5">
+            <!-- ojo, los outline cambian a fondo solido en hover -->
+            <h2 class="fs-2 fw-bold mb-3">Botones outline</h2>
+            <p class="mb-3">
+              Si necesitas algo mas suave, usa la version
+              <code>.btn-outline-*</code>. Solo borde y texto del color, fondo
+              transparente. Cuando le pasas el mouse encima se rellena.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Variantes outline</div>
+              <div class="card-body">
+                <div class="d-flex flex-wrap gap-2">
+                  <button class="btn btn-outline-primary">primary</button>
+                  <button class="btn btn-outline-secondary">secondary</button>
+                  <button class="btn btn-outline-success">success</button>
+                  <button class="btn btn-outline-danger">danger</button>
+                  <button class="btn btn-outline-warning">warning</button>
+                  <button class="btn btn-outline-info">info</button>
+                  <button class="btn btn-outline-dark">dark</button>
+                </div>
+              </div>
+              <div class="card-footer p-0">
+                <pre
+                  class="bg-secondary text-light p-3 m-0"
+                ><code>&lt;button class="btn btn-outline-primary"&gt;primary&lt;/button&gt;
+&lt;button class="btn btn-outline-success"&gt;success&lt;/button&gt;
+&lt;button class="btn btn-outline-danger"&gt;danger&lt;/button&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+
+          <article id="tamanos" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Tamaños</h2>
+            <p class="mb-3">
+              Tres tamaños: pequeño con <code>.btn-sm</code>, normal sin nada
+              extra y grande con <code>.btn-lg</code>. Tambien hay versiones
+              responsivas tipo <code>.btn-md-lg</code>.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Pequeño, normal y grande</div>
+              <div class="card-body">
+                <div class="d-flex flex-wrap gap-2 align-items-center">
+                  <button class="btn btn-primary btn-sm">.btn-sm</button>
+                  <button class="btn btn-primary">normal</button>
+                  <button class="btn btn-primary btn-lg">.btn-lg</button>
+                </div>
+              </div>
+              <div class="card-footer p-0">
+                <pre
+                  class="bg-secondary text-light p-3 m-0"
+                ><code>&lt;button class="btn btn-primary btn-sm"&gt;chico&lt;/button&gt;
+&lt;button class="btn btn-primary"&gt;normal&lt;/button&gt;
+&lt;button class="btn btn-primary btn-lg"&gt;grande&lt;/button&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+
+          <article id="bloque" class="mb-5">
+            <!-- el btn-block apila bien soloo si los pones uno detras de otro -->
+            <h2 class="fs-2 fw-bold mb-3">Botón de bloque</h2>
+            <p class="mb-3">
+              Cuando queres que el botón ocupe todo el ancho disponible (típico
+              en formularios mobile), usa <code>.btn-block</code>. Si apilas dos
+              seguidos, ya viene con un margen entre ellos.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Botones full width apilados</div>
+              <div class="card-body">
+                <button class="btn btn-primary btn-block">
+                  Iniciar sesión
+                </button>
+                <button class="btn btn-secondary btn-block">
+                  Crear cuenta
+                </button>
+              </div>
+              <div class="card-footer p-0">
+                <pre
+                  class="bg-secondary text-light p-3 m-0"
+                ><code>&lt;button class="btn btn-primary btn-block"&gt;Iniciar sesión&lt;/button&gt;
+&lt;button class="btn btn-secondary btn-block"&gt;Crear cuenta&lt;/button&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+
+          <article id="enlaces">
+            <h2 class="fs-2 fw-bold mb-3">Enlaces que parecen botón</h2>
+            <p class="mb-3">
+              Las clases funcionan igual sobre <code>&lt;a&gt;</code>. Util
+              cuando el "boton" en realidad debe llevar a otra página.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Anchor con apariencia de botón</div>
+              <div class="card-body">
+                <div class="d-flex flex-wrap gap-2">
+                  <a href="#" class="btn btn-primary">Ver más</a>
+                  <a href="#" class="btn btn-outline-dark">Cancelar</a>
+                </div>
+              </div>
+              <div class="card-footer p-0">
+                <pre
+                  class="bg-secondary text-light p-3 m-0"
+                ><code>&lt;a href="#" class="btn btn-primary"&gt;Ver más&lt;/a&gt;
+&lt;a href="#" class="btn btn-outline-dark"&gt;Cancelar&lt;/a&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-dark text-light py-4 mt-5">
+      <div class="container text-center">
+        <p class="m-0">HellgarUI © · 2026</p>
+      </div>
+    </footer>
+  </body>
+</html>

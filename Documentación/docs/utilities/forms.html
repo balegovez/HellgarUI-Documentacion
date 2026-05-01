@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms · HellgarUI</title>
+    <link rel="icon" href="../icon/hellgar-icon.png" type="image/png" />
+    <link rel="stylesheet" href="/HellgarUI/scss/main.css" />
+  </head>
+  <body class="bg-light">
+    <nav class="navbar">
+      <a href="/index.html" class="navbar-brand">HellgarUI</a>
+
+      <input type="checkbox" id="main-nav-toggle" class="navbar-toggle" />
+      <label
+        for="main-nav-toggle"
+        class="navbar-toggler"
+        aria-label="Abrir menú"
+      >
+        <span></span><span></span><span></span>
+      </label>
+
+      <ul class="navbar-nav">
+        <li><a href="/index.html" class="navbar-link">Inicio</a></li>
+        <li><a href="grid.html" class="navbar-link">Grid</a></li>
+        <li><a href="buttons.html" class="navbar-link">Botones</a></li>
+        <li><a href="cards.html" class="navbar-link">Cards</a></li>
+        <li><a href="alerts.html" class="navbar-link">Alerts</a></li>
+        <li><a href="forms.html" class="navbar-link active">Forms</a></li>
+        <li><a href="tables.html" class="navbar-link">Tablas</a></li>
+        <li><a href="colors.html" class="navbar-link">Colores</a></li>
+        <li><a href="typography.html" class="navbar-link">Tipografía</a></li>
+        <li><a href="spacing.html" class="navbar-link">Spacing</a></li>
+        <li><a href="utilities.html" class="navbar-link">Utilidades</a></li>
+        <li><a href="badges.html" class="navbar-link">Badges</a></li>
+        <li><a href="../utilities/navbar.html" class="navbar-link">Navbars</a></li>
+        <li><a href="../utilities/footer.html" class="navbar-link">Footers</a></li>
+      </ul>
+    </nav>
+
+    <header class="bg-secondary py-5">
+      <div class="container">
+        <span class="badge badge-primary mb-2">componente</span>
+        <h1 class="fs-1 fw-bold text-white m-0">Formularios</h1>
+        <p class="fs-5 text-light m-0">
+          Inputs, validaciones y estructuras de formularios soportados por la UI.
+        </p>
+      </div>
+    </header>
+
+    <main class="container py-5">
+      <div class="row">
+        <aside class="col-12 col-md-3 mb-4">
+          <div class="card shadow-sm">
+            <div class="card-header">En esta página</div>
+            <div class="card-body">
+              <ul class="d-flex flex-column gap-2">
+                <li>
+                  <a href="#basico" class="navbar-link text-dark">Form básico</a>
+                </li>
+                <li>
+                  <a href="#tipos" class="navbar-link text-dark">Tipos de input</a>
+                </li>
+                <li>
+                  <a href="#variantes" class="navbar-link text-dark">Variantes de estilo</a>
+                </li>
+                <li>
+                  <a href="#textarea" class="navbar-link text-dark">Textarea y select</a>
+                </li>
+                <li>
+                  <a href="#input-group" class="navbar-link text-dark">Input group</a>
+                </li>
+                <li>
+                  <a href="#floating" class="navbar-link text-dark">Floating label</a>
+                </li>
+                <li>
+                  <a href="#check" class="navbar-link text-dark">Checks y radios</a>
+                </li>
+                <li>
+                  <a href="#validacion" class="navbar-link text-dark">Validación</a>
+                </li>
+                <li>
+                  <a href="#completo" class="navbar-link text-dark">Form completo</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+
+        <div class="col-12 col-md-9">
+          <article id="basico" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Formulario básico</h2>
+            <p class="mb-3">
+              El patrón es siempre el mismo: un <code>.form-group</code> que
+              envuelve un <code>.form-label</code> y un input con
+              <code>.form-control</code>. El group ya viene con un margen
+              inferior asi que no necesitas sumar <code>mb-*</code>. Puedes agregar <code>.form-text</code> para textos de ayuda.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Vista previa</div>
+              <div class="card-body bg-light">
+                <div class="form-group">
+                  <label class="form-label" for="email-basic">Email</label>
+                  <input
+                    type="email"
+                    id="email-basic"
+                    class="form-control"
+                    placeholder="tucorreo@ejemplo.com"
+                  />
+                  <small class="form-text">Nunca compartiremos tu correo con nadie.</small>
+                </div>
+              </div>
+              <div class="card-footer p-0">
+                <pre class="bg-secondary text-light p-3 m-0"><code>&lt;div class="form-group"&gt;
+    &lt;label class="form-label" for="email"&gt;Email&lt;/label&gt;
+    &lt;input type="email" id="email" class="form-control" placeholder="tucorreo@ejemplo.com"&gt;
+    &lt;small class="form-text"&gt;Nunca compartiremos tu correo con nadie.&lt;/small&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+
+          <article id="tipos" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Tipos de input</h2>
+            <p class="mb-3">
+              La clase <code>.form-control</code> sirve para casi cualquier tipo
+              de input HTML5: <code>text</code>, <code>email</code>,
+              <code>password</code>, <code>number</code>, <code>date</code> y
+              compañia.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Varios tipos</div>
+              <div class="card-body bg-light">
+                <div class="form-group">
+                  <label class="form-label" for="user-text">Usuario</label>
+                  <input
+                    type="text"
+                    id="user-text"
+                    class="form-control"
+                    placeholder="hellgar_user"
+                  />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="user-pass">Contraseña</label>
+                  <input
+                    type="password"
+                    id="user-pass"
+                    class="form-control"
+                    placeholder="********"
+                  />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="user-number">Edad</label>
+                  <input
+                    type="number"
+                    id="user-number"
+                    class="form-control"
+                    placeholder="18"
+                  />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="user-date">Fecha</label>
+                  <input type="date" id="user-date" class="form-control" />
+                </div>
+              </div>
+              <div class="card-footer p-0">
+                <pre class="bg-secondary text-light p-3 m-0"><code>&lt;input type="text" class="form-control" placeholder="hellgar_user"&gt;
+&lt;input type="password" class="form-control" placeholder="********"&gt;
+&lt;input type="number" class="form-control" placeholder="18"&gt;
+&lt;input type="date" class="form-control"&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+
+          <article id="variantes" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Variantes de estilo</h2>
+            <p class="mb-3">
+              Cuatro estilos de input además del clásico, para adaptarse al diseño de tu interfaz.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Clases de variantes</div>
+              <div class="card-body bg-light">
+                <div class="form-group">
+                  <label class="form-label">.form-control-outline</label>
+                  <input type="text" class="form-control form-control-outline" placeholder="Fondo transparente y bordes más marcados" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">.form-control-flush</label>
+                  <input type="text" class="form-control form-control-flush" placeholder="Sin bordes laterales, ideal para estilo material" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">.form-control-filled</label>
+                  <input type="text" class="form-control form-control-filled" placeholder="Fondo suave, destaca en focus" />
+                </div>
+                <div class="form-group m-0">
+                  <label class="form-label">.form-control-pill</label>
+                  <input type="text" class="form-control form-control-pill" placeholder="Bordes totalmente redondeados" />
+                </div>
+              </div>
+              <div class="card-footer p-0">
+                <pre class="bg-secondary text-light p-3 m-0"><code>&lt;input class="form-control form-control-outline"&gt;
+&lt;input class="form-control form-control-flush"&gt;
+&lt;input class="form-control form-control-filled"&gt;
+&lt;input class="form-control form-control-pill"&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+
+          <article id="textarea" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Textarea y select</h2>
+            <p class="mb-3">
+              Los <code>&lt;textarea&gt;</code> y
+              <code>&lt;select&gt;</code> tambien usan
+              <code>.form-control</code>. Funcionan igual y respetan el mismo
+              estilo de borde y focus.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Textarea + select</div>
+              <div class="card-body bg-light">
+                <div class="form-group">
+                  <label class="form-label" for="msg">Mensaje</label>
+                  <textarea
+                    id="msg"
+                    class="form-control"
+                    rows="4"
+                    placeholder="Escribi algo lindo..."
+                  ></textarea>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="pais">País</label>
+                  <select id="pais" class="form-control">
+                    <option>El Salvador</option>
+                    <option>Argentina</option>
+                    <option>México</option>
+                    <option>España</option>
+                  </select>
+                </div>
+              </div>
+              <div class="card-footer p-0">
+                <pre class="bg-secondary text-light p-3 m-0"><code>&lt;textarea class="form-control" rows="4" placeholder="..."&gt;&lt;/textarea&gt;
+
+&lt;select class="form-control"&gt;
+    &lt;option&gt;El Salvador&lt;/option&gt;
+    &lt;option&gt;Argentina&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+
+          <article id="input-group" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Input group</h2>
+            <p class="mb-3">
+              Envolvé tu input en un <code>.input-group</code> y añade addons antes o después usando <code>.input-group-text</code>.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Addons</div>
+              <div class="card-body bg-light">
+                <div class="form-group">
+                  <label class="form-label">Usuario de red</label>
+                  <div class="input-group">
+                    <span class="input-group-text">@</span>
+                    <input type="text" class="form-control" placeholder="usuario" />
+                  </div>
+                </div>
+                <div class="form-group m-0">
+                  <label class="form-label">Precio</label>
+                  <div class="input-group">
+                    <span class="input-group-text">$</span>
+                    <input type="number" class="form-control" placeholder="0.00" />
+                    <span class="input-group-text">USD</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer p-0">
+                <pre class="bg-secondary text-light p-3 m-0"><code>&lt;div class="input-group"&gt;
+    &lt;span class="input-group-text"&gt;$&lt;/span&gt;
+    &lt;input type="number" class="form-control" placeholder="0.00"&gt;
+    &lt;span class="input-group-text"&gt;USD&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+
+          <article id="floating" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Floating label</h2>
+            <p class="mb-3">
+              Usa <code>.form-floating</code> para etiquetas animadas. Requiere que el input tenga el atributo <code>placeholder</code> (incluso si está vacío) y que la clase <code>.form-label</code> venga <em>después</em> del input en el DOM.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Etiquetas flotantes</div>
+              <div class="card-body bg-light">
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                  <label class="form-label" for="floatingInput">Correo electrónico</label>
+                </div>
+                <div class="form-floating">
+                  <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                  <label class="form-label" for="floatingPassword">Contraseña</label>
+                </div>
+              </div>
+              <div class="card-footer p-0">
+                <pre class="bg-secondary text-light p-3 m-0"><code>&lt;div class="form-floating"&gt;
+    &lt;input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"&gt;
+    &lt;label class="form-label" for="floatingInput"&gt;Correo electrónico&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+
+          <article id="check" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Checkboxes y radios</h2>
+            <p class="mb-3">
+              Para checks y radios usá un <code>&lt;label&gt;</code> con la
+              clase <code>.form-check</code>. Adentro mete el input y el texto.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Checks apilados</div>
+              <div class="card-body bg-light">
+                <label class="form-check">
+                  <input type="checkbox" checked />
+                  <span>Recibir novedades por correo</span>
+                </label>
+                <label class="form-check">
+                  <input type="checkbox" />
+                  <span>Acepto los términos y condiciones</span>
+                </label>
+                <label class="form-check">
+                  <input type="checkbox" />
+                  <span>Suscribirme al boletin semanal</span>
+                </label>
+              </div>
+            </div>
+          </article>
+
+          <article id="validacion" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Estados de validación</h2>
+            <p class="mb-3">
+              Sumale <code>.is-valid</code> al input cuando esté OK, o
+              <code>.is-invalid</code> cuando tenga error. El borde y el halo de focus cambian del color
+              correspondiente.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Estados admitidos</div>
+              <div class="card-body bg-light">
+                <div class="form-group">
+                  <label class="form-label" for="ok-input">Email válido</label>
+                  <input
+                    type="email"
+                    id="ok-input"
+                    class="form-control is-valid"
+                    value="hola@hellgar.dev"
+                  />
+                  <small class="form-text text-success">Se ve bien.</small>
+                </div>
+                <div class="form-group m-0">
+                  <label class="form-label" for="bad-input"
+                    >Email inválido</label
+                  >
+                  <input
+                    type="email"
+                    id="bad-input"
+                    class="form-control is-invalid"
+                    value="esto-no-es-un-email"
+                  />
+                  <small class="form-text text-danger">Falta el @ y el dominio.</small>
+                </div>
+              </div>
+              <div class="card-footer p-0">
+                <pre class="bg-secondary text-light p-3 m-0"><code>&lt;input class="form-control is-valid"&gt;
+&lt;input class="form-control is-invalid"&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+
+          <article id="completo">
+            <h2 class="fs-2 fw-bold mb-3">Formulario completo</h2>
+            <p class="mb-3">
+              Combinando todo lo de arriba mas el sistema de grid podes armar
+              formularios de varias columnas en desktop y una sola columna en
+              mobile, sin pelear nada.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Form de contacto</div>
+              <div class="card-body bg-light">
+                <div class="row">
+                  <div class="col-12 col-md-6">
+                    <div class="form-group">
+                      <label class="form-label" for="full-name">Nombre</label>
+                      <input
+                        type="text"
+                        id="full-name"
+                        class="form-control"
+                        placeholder="Tu nombre"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <div class="form-group">
+                      <label class="form-label" for="full-mail">Email</label>
+                      <input
+                        type="email"
+                        id="full-mail"
+                        class="form-control"
+                        placeholder="tu@correo.com"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-group">
+                      <label class="form-label" for="full-msg">Mensaje</label>
+                      <textarea
+                        id="full-msg"
+                        class="form-control"
+                        rows="4"
+                        placeholder="Contanos algo..."
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-check mb-3">
+                      <input type="checkbox" />
+                      <span>Acepto que me contacten</span>
+                    </label>
+                  </div>
+                  <div class="col-12">
+                    <button class="btn btn-primary">Enviar mensaje</button>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer p-0">
+                <pre class="bg-secondary text-light p-3 m-0"><code>&lt;div class="row"&gt;
+    &lt;div class="col-12 col-md-6"&gt;
+        &lt;div class="form-group"&gt;
+            &lt;label class="form-label" for="nombre"&gt;Nombre&lt;/label&gt;
+            &lt;input type="text" id="nombre" class="form-control"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col-12 col-md-6"&gt;
+        &lt;div class="form-group"&gt;
+            &lt;label class="form-label" for="mail"&gt;Email&lt;/label&gt;
+            &lt;input type="email" id="mail" class="form-control"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col-12"&gt;
+        &lt;button class="btn btn-primary"&gt;Enviar mensaje&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-dark text-light py-4 mt-5">
+      <div class="container text-center">
+        <p class="m-0">HellgarUI © · 2026</p>
+      </div>
+    </footer>
+  </body>
+</html>

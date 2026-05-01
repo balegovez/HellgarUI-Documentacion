@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbars · HellgarUI</title>
+    <link rel="icon" href="../icon/hellgar-icon.png" type="image/png" />
+    <link rel="stylesheet" href="/HellgarUI/scss/main.css" />
+  </head>
+  <body class="bg-light">
+    <nav class="navbar">
+      <a href="/index.html" class="navbar-brand">HellgarUI</a>
+
+      <input type="checkbox" id="main-nav-toggle" class="navbar-toggle" />
+      <label
+        for="main-nav-toggle"
+        class="navbar-toggler"
+        aria-label="Abrir menú"
+      >
+        <span></span><span></span><span></span>
+      </label>
+
+      <ul class="navbar-nav">
+        <li><a href="/index.html" class="navbar-link">Inicio</a></li>
+        <li><a href="grid.html" class="navbar-link">Grid</a></li>
+        <li><a href="buttons.html" class="navbar-link">Botones</a></li>
+        <li><a href="cards.html" class="navbar-link">Cards</a></li>
+        <li><a href="alerts.html" class="navbar-link">Alerts</a></li>
+        <li><a href="forms.html" class="navbar-link">Forms</a></li>
+        <li><a href="tables.html" class="navbar-link">Tablas</a></li>
+        <li><a href="colors.html" class="navbar-link">Colores</a></li>
+        <li><a href="typography.html" class="navbar-link">Tipografía</a></li>
+        <li><a href="spacing.html" class="navbar-link">Spacing</a></li>
+        <li><a href="utilities.html" class="navbar-link">Utilidades</a></li>
+        <li><a href="badges.html" class="navbar-link">Badges</a></li>
+        <li><a href="../utilities/navbar.html" class="navbar-link active">Navbars</a></li>
+        <li><a href="../utilities/footer.html" class="navbar-link">Footers</a></li>
+      </ul>
+    </nav>
+
+    <header class="bg-secondary py-5">
+      <div class="container">
+        <span class="badge badge-primary mb-2">componente</span>
+        <h1 class="fs-1 fw-bold text-white m-0">Navbars</h1>
+        <p class="fs-5 text-light m-0">
+          Barras de navegación responsivas, con búsqueda integrada, CTAs y
+          variantes de tema. 100% CSS, sin JavaScript.
+        </p>
+      </div>
+    </header>
+
+    <main class="container py-5">
+      <div class="row">
+        <aside class="col-12 col-md-3 mb-4">
+          <div class="card shadow-sm">
+            <div class="card-header">En esta página</div>
+            <div class="card-body">
+              <ul class="d-flex flex-column gap-2">
+                <li>
+                  <a href="#basico" class="navbar-link text-dark">Navbar base</a>
+                </li>
+                <li>
+                  <a href="#activo" class="navbar-link text-dark">Estado activo</a>
+                </li>
+                <li>
+                  <a href="#light" class="navbar-link text-dark">Variante clara</a>
+                </li>
+                <li>
+                  <a href="#transparent" class="navbar-link text-dark">Transparente</a>
+                </li>
+                <li>
+                  <a href="#search" class="navbar-link text-dark">Con búsqueda</a>
+                </li>
+                <li>
+                  <a href="#cta" class="navbar-link text-dark">Con CTA</a>
+                </li>
+                <li>
+                  <a href="#completo" class="navbar-link text-dark">Combo completo</a>
+                </li>
+                <li>
+                  <a href="#sticky" class="navbar-link text-dark">Sticky / Fixed</a>
+                </li>
+                <li>
+                  <a href="#responsive" class="navbar-link text-dark">Cómo es responsive</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+
+        <div class="col-12 col-md-9">
+          <article id="basico" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Navbar base</h2>
+            <p class="mb-3">
+              El componente <code>.navbar</code> usa el color secundario por
+              defecto y trae una sombra sutil. Mobile-first: en móviles los
+              enlaces se ocultan detrás de un toggler hamburguesa, en
+              <code>md+</code> se alinean en horizontal.
+            </p>
+            <p class="mb-3">
+              <strong>Importante:</strong> el toggler funciona con un
+              <code>&lt;input type="checkbox"&gt;</code> oculto y un
+              <code>&lt;label&gt;</code> que lo togglea. Sin JavaScript.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">
+                Vista previa · achicá la pantalla para ver el menú móvil
+              </div>
+              <div class="card-body bg-light p-0">
+                <nav class="navbar" style="margin: 0; border-radius: 0;">
+                  <a href="#" class="navbar-brand">Marca</a>
+
+                  <input
+                    type="checkbox"
+                    id="nav-toggle-base"
+                    class="navbar-toggle"
+                  />
+                  <label for="nav-toggle-base" class="navbar-toggler">
+                    <span></span><span></span><span></span>
+                  </label>
+
+                  <ul class="navbar-nav">
+                    <li><a href="#" class="navbar-link">Inicio</a></li>
+                    <li><a href="#" class="navbar-link">Servicios</a></li>
+                    <li><a href="#" class="navbar-link">Contacto</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="card-footer p-0">
+                <pre
+                  class="bg-secondary text-light p-3 m-0"
+                ><code>&lt;nav class="navbar"&gt;
+    &lt;a href="#" class="navbar-brand"&gt;Marca&lt;/a&gt;
+
+    &lt;input type="checkbox" id="nav-toggle" class="navbar-toggle"&gt;
+    &lt;label for="nav-toggle" class="navbar-toggler"&gt;
+        &lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;
+    &lt;/label&gt;
+
+    &lt;ul class="navbar-nav"&gt;
+        &lt;li&gt;&lt;a href="#" class="navbar-link"&gt;Inicio&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#" class="navbar-link"&gt;Servicios&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+
+          <article id="activo" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Estado activo</h2>
+            <p class="mb-3">
+              Sumá la clase <code>.active</code> a un
+              <code>.navbar-link</code> para resaltarlo. El estilo activa un
+              subrayado animado en color primario por debajo del texto.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">El primer enlace tiene .active</div>
+              <div class="card-body bg-light p-0">
+                <nav class="navbar" style="margin: 0; border-radius: 0;">
+                  <a href="#" class="navbar-brand">Marca</a>
+
+                  <input
+                    type="checkbox"
+                    id="nav-toggle-active"
+                    class="navbar-toggle"
+                  />
+                  <label for="nav-toggle-active" class="navbar-toggler">
+                    <span></span><span></span><span></span>
+                  </label>
+
+                  <ul class="navbar-nav">
+                    <li><a href="#" class="navbar-link active">Dashboard</a></li>
+                    <li><a href="#" class="navbar-link">Pedidos</a></li>
+                    <li><a href="#" class="navbar-link">Clientes</a></li>
+                    <li><a href="#" class="navbar-link">Reportes</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="card-footer p-0">
+                <pre
+                  class="bg-secondary text-light p-3 m-0"
+                ><code>&lt;a href="#" class="navbar-link active"&gt;Dashboard&lt;/a&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+
+          <article id="light" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Variante clara</h2>
+            <p class="mb-3">
+              Si tu sitio tiene tema claro, sumale la clase
+              <code>.navbar-light</code>. El fondo, los enlaces y el toggler
+              ajustan colores automáticamente para mantener contraste.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Vista previa</div>
+              <div class="card-body bg-dark p-4">
+                <nav class="navbar navbar-light rounded">
+                  <a href="#" class="navbar-brand">Marca</a>
+
+                  <input
+                    type="checkbox"
+                    id="nav-toggle-light"
+                    class="navbar-toggle"
+                  />
+                  <label for="nav-toggle-light" class="navbar-toggler">
+                    <span></span><span></span><span></span>
+                  </label>
+
+                  <ul class="navbar-nav">
+                    <li><a href="#" class="navbar-link active">Dashboard</a></li>
+                    <li><a href="#" class="navbar-link">Perfil</a></li>
+                    <li><a href="#" class="navbar-link">Ajustes</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="card-footer p-0">
+                <pre
+                  class="bg-secondary text-light p-3 m-0"
+                ><code>&lt;nav class="navbar navbar-light"&gt;
+    &lt;!-- mismo contenido interno --&gt;
+&lt;/nav&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+
+          <article id="transparent" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Variante transparente</h2>
+            <p class="mb-3">
+              <code>.navbar-transparent</code> elimina el fondo y la sombra.
+              Pensada para apoyar la navbar sobre un hero con imagen o un
+              fondo de color. Combiná con <code>.navbar-light</code> si el
+              fondo de atrás es oscuro.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Sobre un fondo de color</div>
+              <div
+                class="card-body p-0"
+                style="background: linear-gradient(135deg, #E53935, #FF9800); padding: 1.5rem;"
+              >
+                <nav
+                  class="navbar navbar-transparent"
+                  style="margin: 0; padding: 1rem 1.5rem;"
+                >
+                  <a href="#" class="navbar-brand text-white">Marca</a>
+
+                  <input
+                    type="checkbox"
+                    id="nav-toggle-trans"
+                    class="navbar-toggle"
+                  />
+                  <label for="nav-toggle-trans" class="navbar-toggler">
+                    <span></span><span></span><span></span>
+                  </label>
+
+                  <ul class="navbar-nav">
+                    <li><a href="#" class="navbar-link">Tour</a></li>
+                    <li><a href="#" class="navbar-link">Precios</a></li>
+                    <li><a href="#" class="navbar-link">Blog</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="card-footer p-0">
+                <pre
+                  class="bg-secondary text-light p-3 m-0"
+                ><code>&lt;nav class="navbar navbar-transparent"&gt;
+    &lt;!-- contenido --&gt;
+&lt;/nav&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+
+          <article id="search" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Navbar con búsqueda integrada</h2>
+            <p class="mb-3">
+              El sub-componente <code>.navbar-search</code> es una mini-pill
+              que envuelve un <code>&lt;input&gt;</code> y opcionalmente un
+              ícono. Crece o se achica según el espacio disponible y se
+              ilumina cuando recibe foco.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Vista previa</div>
+              <div class="card-body bg-light p-0">
+                <nav class="navbar" style="margin: 0; border-radius: 0;">
+                  <a href="#" class="navbar-brand">Marca</a>
+
+                  <input
+                    type="checkbox"
+                    id="nav-toggle-search"
+                    class="navbar-toggle"
+                  />
+                  <label for="nav-toggle-search" class="navbar-toggler">
+                    <span></span><span></span><span></span>
+                  </label>
+
+                  <ul class="navbar-nav">
+                    <li><a href="#" class="navbar-link active">Catálogo</a></li>
+                    <li><a href="#" class="navbar-link">Ofertas</a></li>
+                    <li>
+                      <div class="navbar-search">
+                        <span>🔎</span>
+                        <input type="search" placeholder="Buscar productos…" />
+                      </div>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="card-footer p-0">
+                <pre
+                  class="bg-secondary text-light p-3 m-0"
+                ><code>&lt;li&gt;
+    &lt;div class="navbar-search"&gt;
+        &lt;span&gt;🔎&lt;/span&gt;
+        &lt;input type="search" placeholder="Buscar..."&gt;
+    &lt;/div&gt;
+&lt;/li&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+
+          <article id="cta" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Navbar con CTA</h2>
+            <p class="mb-3">
+              Para botones de acción primaria (Login, Sign up, Empezar prueba)
+              usá <code>.navbar-cta</code> al lado del
+              <code>.navbar-nav</code>. En mobile se apila bajo los enlaces;
+              en desktop queda a la derecha del todo.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Login + Sign up</div>
+              <div class="card-body bg-light p-0">
+                <nav class="navbar" style="margin: 0; border-radius: 0;">
+                  <a href="#" class="navbar-brand">Marca</a>
+
+                  <input
+                    type="checkbox"
+                    id="nav-toggle-cta"
+                    class="navbar-toggle"
+                  />
+                  <label for="nav-toggle-cta" class="navbar-toggler">
+                    <span></span><span></span><span></span>
+                  </label>
+
+                  <ul class="navbar-nav">
+                    <li><a href="#" class="navbar-link">Producto</a></li>
+                    <li><a href="#" class="navbar-link">Precios</a></li>
+                    <li><a href="#" class="navbar-link">Docs</a></li>
+                  </ul>
+
+                  <div class="navbar-cta px-2">
+                    <a href="#" class="btn btn-outline-light btn-sm">
+                      Iniciar sesión
+                    </a>
+                    <a href="#" class="btn btn-primary btn-sm">Sign up</a>
+                  </div>
+                </nav>
+              </div>
+              <div class="card-footer p-0">
+                <pre
+                  class="bg-secondary text-light p-3 m-0"
+                ><code>&lt;ul class="navbar-nav"&gt;...&lt;/ul&gt;
+
+&lt;!-- Con ms-md-4 agregamos el margen necesario --&gt;
+&lt;div class="navbar-cta ms-md-4"&gt;
+    &lt;a href="#" class="btn btn-outline-light btn-sm"&gt;Iniciar sesión&lt;/a&gt;
+    &lt;a href="#" class="btn btn-primary btn-sm"&gt;Sign up&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+
+          <article id="completo" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Combo completo</h2>
+            <p class="mb-3">
+              Todo junto: marca, enlaces, separador vertical, búsqueda y dos
+              botones de CTA. El <code>.navbar-divider</code> sólo se muestra
+              en <code>md+</code> para separar visualmente grupos de
+              navegación.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Layout estilo SaaS</div>
+              <div class="card-body bg-light p-0">
+                <nav class="navbar" style="margin: 0; border-radius: 0;">
+                  <a href="#" class="navbar-brand">Marca</a>
+
+                  <input
+                    type="checkbox"
+                    id="nav-toggle-full"
+                    class="navbar-toggle"
+                  />
+                  <label for="nav-toggle-full" class="navbar-toggler">
+                    <span></span><span></span><span></span>
+                  </label>
+
+                  <ul class="navbar-nav">
+                    <li><a href="#" class="navbar-link active">Dashboard</a></li>
+                    <li><a href="#" class="navbar-link">Proyectos</a></li>
+                    <li><a href="#" class="navbar-link">Equipo</a></li>
+                    <li>
+                      <span class="navbar-divider"></span>
+                    </li>
+                    <li>
+                      <div class="navbar-search">
+                        <span>🔎</span>
+                        <input type="search" placeholder="Buscar…" />
+                      </div>
+                    </li>
+                  </ul>
+
+                  <div class="navbar-cta px-2">
+                    <a href="#" class="btn btn-primary btn-sm">+ Nuevo</a>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </article>
+
+          <article id="sticky" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Sticky y Fixed</h2>
+            <p class="mb-3">
+              <code>.navbar-sticky</code> hace que la barra se quede pegada
+              arriba al hacer scroll, pero cede su lugar cuando vuelve hacia
+              abajo. <code>.navbar-fixed-top</code> la fija siempre en la
+              parte superior del viewport (necesitás compensar con
+              <code>padding-top</code> en el body).
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Cuándo usar cada una</div>
+              <div class="card-body bg-light">
+                <ul class="m-0" style="padding-left: 1.2rem;">
+                  <li>
+                    <code>navbar-sticky</code> — para landings y blogs. Se
+                    queda arriba pero no estorba al scrollear hacia atrás.
+                  </li>
+                  <li>
+                    <code>navbar-fixed-top</code> — para apps tipo dashboard
+                    donde la navegación es crítica y siempre debe verse.
+                  </li>
+                </ul>
+              </div>
+              <div class="card-footer p-0">
+                <pre
+                  class="bg-secondary text-light p-3 m-0"
+                ><code>&lt;nav class="navbar navbar-sticky"&gt;...&lt;/nav&gt;
+&lt;nav class="navbar navbar-fixed-top"&gt;...&lt;/nav&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+
+          <article id="responsive">
+            <h2 class="fs-2 fw-bold mb-3">¿Cómo funciona el responsive?</h2>
+            <p class="mb-3">
+              En mobile, el <code>.navbar-nav</code> y el
+              <code>.navbar-cta</code> arrancan ocultos
+              (<code>display: none</code>). Al clickear el toggler (un
+              <code>&lt;label&gt;</code> conectado a un
+              <code>&lt;input type="checkbox"&gt;</code> oculto), el checkbox
+              cambia a <code>:checked</code> y el selector hermano
+              <code>~</code> alcanza al nav y al CTA para mostrarlos. Bonus:
+              las tres barras del toggler se animan formando una "X".
+            </p>
+            <p class="mb-3">
+              Pasado el breakpoint <code>md</code> (768px), el toggler
+              desaparece, los enlaces vuelven a fila horizontal y todo se
+              alinea en una sola línea.
+            </p>
+
+          </article>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-dark text-light py-4 mt-5">
+      <div class="container text-center">
+        <p class="m-0">HellgarUI © · 2026</p>
+      </div>
+    </footer>
+  </body>
+</html>

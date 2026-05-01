@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid · HellgarUI</title>
+    <link rel="icon" href="../icon/hellgar-icon.png" type="image/png" />
+    <link rel="stylesheet" href="/HellgarUI/scss/main.css" />
+  </head>
+  <body class="bg-light">
+        <nav class="navbar">
+      <a href="/index.html" class="navbar-brand">HellgarUI</a>
+
+      <input type="checkbox" id="main-nav-toggle" class="navbar-toggle" />
+      <label
+        for="main-nav-toggle"
+        class="navbar-toggler"
+        aria-label="Abrir menú"
+      >
+        <span></span><span></span><span></span>
+      </label>
+
+      <ul class="navbar-nav">
+        <li><a href="/index.html" class="navbar-link">Inicio</a></li>
+        <li><a href="grid.html" class="navbar-link active">Grid</a></li>
+        <li><a href="buttons.html" class="navbar-link">Botones</a></li>
+        <li><a href="cards.html" class="navbar-link">Cards</a></li>
+        <li><a href="alerts.html" class="navbar-link">Alerts</a></li>
+        <li><a href="forms.html" class="navbar-link">Forms</a></li>
+        <li><a href="tables.html" class="navbar-link">Tablas</a></li>
+        <li><a href="colors.html" class="navbar-link">Colores</a></li>
+        <li><a href="typography.html" class="navbar-link">Tipografía</a></li>
+        <li><a href="spacing.html" class="navbar-link">Spacing</a></li>
+        <li><a href="utilities.html" class="navbar-link">Utilidades</a></li>
+        <li><a href="badges.html" class="navbar-link">Badges</a></li>
+        <li><a href="../utilities/navbar.html" class="navbar-link">Navbars</a></li>
+        <li><a href="../utilities/footer.html" class="navbar-link">Footers</a></li>
+      </ul>
+    </nav>
+
+    <header class="bg-secondary py-5">
+      <div class="container">
+        <span class="badge badge-primary mb-2">layout</span>
+        <h1 class="fs-1 fw-bold text-white m-0">Sistema de Grid</h1>
+        <p class="fs-5 text-light m-0">
+          12 columnas, mobile first, con breakpoints sm, md, lg, xl y xxl.
+        </p>
+      </div>
+    </header>
+
+    <main class="container py-5">
+      <div class="row">
+        <aside class="col-12 col-md-3 mb-4">
+          <div class="card shadow-sm">
+            <div class="card-header">En esta página</div>
+            <div class="card-body">
+              <ul class="d-flex flex-column gap-2">
+                <li>
+                  <a href="#container" class="navbar-link text-dark"
+                    >Container</a
+                  >
+                </li>
+                <li>
+                  <a href="#row-col" class="navbar-link text-dark">Row y col</a>
+                </li>
+                <li>
+                  <a href="#responsivo" class="navbar-link text-dark"
+                    >Responsivo</a
+                  >
+                </li>
+                <li>
+                  <a href="#offsets" class="navbar-link text-dark">Offsets</a>
+                </li>
+                <li>
+                  <a href="#breakpoints" class="navbar-link text-dark"
+                    >Breakpoints</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+
+        <div class="col-12 col-md-9">
+          <article id="container" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Container</h2>
+            <p class="mb-3">
+              El <code>.container</code> tiene anchos máximos por breakpoint y
+              se centra solo. El <code>.container-fluid</code> ocupa el 100% del
+              ancho disponible siempre.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Vista previa</div>
+              <div class="card-body bg-light">
+                <div class="bg-primary p-3 rounded text-center mb-3">
+                  <span class="fw-bold">.container (con max-width)</span>
+                </div>
+                <div class="bg-secondary text-white p-3 rounded text-center">
+                  <span class="fw-bold">.container-fluid (100% ancho)</span>
+                </div>
+              </div>
+              <div class="card-footer p-0">
+                <pre
+                  class="bg-secondary text-light p-3 m-0"
+                ><code>&lt;div class="container"&gt;
+    &lt;!-- contenido centrado con max-width según breakpoint --&gt;
+&lt;/div&gt;
+
+&lt;div class="container-fluid"&gt;
+    &lt;!-- contenido full width --&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+
+          <article id="row-col" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Row y columnas</h2>
+            <p class="mb-3">
+              Dentro de un <code>.container</code> creas filas con
+              <code>.row</code> y dentro metes columnas
+              <code>.col-1</code> hasta <code>.col-12</code>. Las columnas suman
+              12 por fila.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">3 columnas iguales</div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-4">
+                    <div class="bg-primary p-3 rounded text-center">.col-4</div>
+                  </div>
+                  <div class="col-4">
+                    <div class="bg-primary p-3 rounded text-center">.col-4</div>
+                  </div>
+                  <div class="col-4">
+                    <div class="bg-primary p-3 rounded text-center">.col-4</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer p-0">
+                <pre
+                  class="bg-secondary text-light p-3 m-0"
+                ><code>&lt;div class="row"&gt;
+    &lt;div class="col-4"&gt;una&lt;/div&gt;
+    &lt;div class="col-4"&gt;dos&lt;/div&gt;
+    &lt;div class="col-4"&gt;tres&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Columnas desiguales</div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-3">
+                    <div class="bg-accent p-3 rounded text-center">.col-3</div>
+                  </div>
+                  <div class="col-6">
+                    <div class="bg-primary p-3 rounded text-center">.col-6</div>
+                  </div>
+                  <div class="col-3">
+                    <div class="bg-accent p-3 rounded text-center">.col-3</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer p-0">
+                <pre
+                  class="bg-secondary text-light p-3 m-0"
+                ><code>&lt;div class="row"&gt;
+    &lt;div class="col-3"&gt;sidebar&lt;/div&gt;
+    &lt;div class="col-6"&gt;contenido principal&lt;/div&gt;
+    &lt;div class="col-3"&gt;widgets&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+
+          <article id="responsivo" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Columnas responsivas</h2>
+            <p class="mb-3">
+              Si quieres que en móvil sea una columna y en desktop sean dos o
+              tres, combina prefijos. Ejemplo:
+              <code>col-12 col-md-6 col-lg-4</code> significa "ocupa todo en
+              mobile, mitad en tablet y un tercio en desktop".
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Redimensiona la ventana</div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="bg-primary p-3 rounded text-center">item 1</div>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="bg-primary p-3 rounded text-center">item 2</div>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="bg-primary p-3 rounded text-center">item 3</div>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="bg-primary p-3 rounded text-center">item 4</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer p-0">
+                <pre
+                  class="bg-secondary text-light p-3 m-0"
+                ><code>&lt;div class="row"&gt;
+    &lt;div class="col-12 col-md-6 col-lg-4"&gt;item 1&lt;/div&gt;
+    &lt;div class="col-12 col-md-6 col-lg-4"&gt;item 2&lt;/div&gt;
+    &lt;div class="col-12 col-md-6 col-lg-4"&gt;item 3&lt;/div&gt;
+    &lt;div class="col-12 col-md-6 col-lg-4"&gt;item 4&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+
+          <article id="offsets" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Offsets</h2>
+            <p class="mb-3">
+              Para empujar una columna hacia la derecha sin meter una columna
+              vacía usa <code>.offset-md-*</code>. Ojo, los offsets en HellgarUI
+              vienen con prefijo de breakpoint.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Columna centrada con offset</div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-12 col-md-6 offset-md-3">
+                    <div class="bg-primary p-3 rounded text-center">
+                      .col-md-6 .offset-md-3
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer p-0">
+                <pre
+                  class="bg-secondary text-light p-3 m-0"
+                ><code>&lt;div class="row"&gt;
+    &lt;div class="col-12 col-md-6 offset-md-3"&gt;
+        Contenido centrado en desktop
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+
+          <article id="breakpoints">
+            <h2 class="fs-2 fw-bold mb-3">Tabla de breakpoints</h2>
+            <p class="mb-3">
+              Estos son los puntos de quiebre que reconoce el framework. Como es
+              mobile first, cada uno aplica desde ese ancho
+              <strong>hacia arriba</strong>.
+            </p>
+
+            <table class="table table-bordered table-hover">
+              <thead>
+                <tr>
+                  <th>Prefijo</th>
+                  <th>Nombre</th>
+                  <th>Min width</th>
+                  <th>Para qué sirve</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>xsm</code></td>
+                  <td>extra small</td>
+                  <td>480px</td>
+                  <td>celulares pequeños</td>
+                </tr>
+                <tr>
+                  <td><code>sm</code></td>
+                  <td>small</td>
+                  <td>576px</td>
+                  <td>celulares grandes</td>
+                </tr>
+                <tr>
+                  <td><code>md</code></td>
+                  <td>medium</td>
+                  <td>768px</td>
+                  <td>tablets</td>
+                </tr>
+                <tr>
+                  <td><code>lg</code></td>
+                  <td>large</td>
+                  <td>992px</td>
+                  <td>escritorio normal</td>
+                </tr>
+                <tr>
+                  <td><code>xl</code></td>
+                  <td>extra large</td>
+                  <td>1200px</td>
+                  <td>pantallas grandes</td>
+                </tr>
+                <tr>
+                  <td><code>xxl</code></td>
+                  <td>extra extra</td>
+                  <td>1400px</td>
+                  <td>monitores enormes</td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-dark text-light py-4 mt-5">
+      <div class="container text-center">
+        <p class="m-0">HellgarUI © · 2026</p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cards · HellgarUI</title>
+    <link rel="icon" href="../icon/hellgar-icon.png" type="image/png" />
+    <link rel="stylesheet" href="/HellgarUI/scss/main.css" />
+  </head>
+  <body class="bg-light">
+    <nav class="navbar">
+      <a href="/index.html" class="navbar-brand">HellgarUI</a>
+
+      <input type="checkbox" id="main-nav-toggle" class="navbar-toggle" />
+      <label
+        for="main-nav-toggle"
+        class="navbar-toggler"
+        aria-label="Abrir menú"
+      >
+        <span></span><span></span><span></span>
+      </label>
+
+      <ul class="navbar-nav">
+        <li><a href="/index.html" class="navbar-link">Inicio</a></li>
+        <li><a href="grid.html" class="navbar-link">Grid</a></li>
+        <li><a href="buttons.html" class="navbar-link">Botones</a></li>
+        <li><a href="cards.html" class="navbar-link active">Cards</a></li>
+        <li><a href="alerts.html" class="navbar-link">Alerts</a></li>
+        <li><a href="forms.html" class="navbar-link">Forms</a></li>
+        <li><a href="tables.html" class="navbar-link">Tablas</a></li>
+        <li><a href="colors.html" class="navbar-link">Colores</a></li>
+        <li><a href="typography.html" class="navbar-link">Tipografía</a></li>
+        <li><a href="spacing.html" class="navbar-link">Spacing</a></li>
+        <li><a href="utilities.html" class="navbar-link">Utilidades</a></li>
+        <li><a href="badges.html" class="navbar-link">Badges</a></li>
+        <li><a href="../utilities/navbar.html" class="navbar-link">Navbars</a></li>
+        <li><a href="../utilities/footer.html" class="navbar-link">Footers</a></li>
+      </ul>
+    </nav>
+
+    <header class="bg-secondary py-5">
+      <div class="container">
+        <span class="badge badge-primary mb-2">componente</span>
+        <h1 class="fs-1 fw-bold text-white m-0">Cards</h1>
+        <p class="fs-5 text-light m-0">
+          Contenedores con header, body y footer. Combinables hasta el
+          cansancio.
+        </p>
+      </div>
+    </header>
+
+    <main class="container py-5">
+      <div class="row">
+        <aside class="col-12 col-md-3 mb-4">
+          <div class="card shadow-sm">
+            <div class="card-header">En esta página</div>
+            <div class="card-body">
+              <ul class="d-flex flex-column gap-2">
+                <li>
+                  <a href="#basica" class="navbar-link text-dark"
+                    >Card básica</a
+                  >
+                </li>
+                <li>
+                  <a href="#partes" class="navbar-link text-dark"
+                    >Header y footer</a
+                  >
+                </li>
+                <li>
+                  <a href="#imagen" class="navbar-link text-dark">Con imagen</a>
+                </li>
+                <li>
+                  <a href="#colores" class="navbar-link text-dark"
+                    >Cards de color</a
+                  >
+                </li>
+                <li>
+                  <a href="#sombras" class="navbar-link text-dark">Sombras</a>
+                </li>
+                <li>
+                  <a href="#grilla" class="navbar-link text-dark"
+                    >Cards en grid</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+
+        <div class="col-12 col-md-9">
+          <article id="basica" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Card básica</h2>
+            <p class="mb-3">
+              Lo mínimo: un <code>.card</code> con un <code>.card-body</code>
+              adentro. Ya tenés fondo blanco, borde sutil, esquinas redondeadas
+              y una sombra leve.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Vista previa</div>
+              <div class="card-body bg-light">
+                <div class="card">
+                  <div class="card-body">
+                    <h3 class="fs-5 fw-bold mb-2">Soy una card</h3>
+                    <p class="m-0 text-muted">
+                      Texto cualquiera adentro del cuerpo. Limpia y al grano.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer p-0">
+                <pre
+                  class="bg-secondary text-light p-3 m-0"
+                ><code>&lt;div class="card"&gt;
+    &lt;div class="card-body"&gt;
+        &lt;h3 class="fs-5 fw-bold mb-2"&gt;Soy una card&lt;/h3&gt;
+        &lt;p class="m-0 text-muted"&gt;Texto cualquiera adentro del cuerpo.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+
+          <article id="partes" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Header y footer</h2>
+            <p class="mb-3">
+              Sumale un <code>.card-header</code> arriba y un
+              <code>.card-footer</code> abajo. Ya quedan separados con su línea
+              fina y un fondo gris muy clarito.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Card completa</div>
+              <div class="card-body bg-light">
+                <div class="card">
+                  <div class="card-header">Notificaciones</div>
+                  <div class="card-body">
+                    <p class="m-0">
+                      Tenés 3 mensajes nuevos esperando que les hagas caso.
+                    </p>
+                  </div>
+                  <div class="card-footer">
+                    <a href="#" class="btn btn-primary btn-sm">Ver todo</a>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer p-0">
+                <pre
+                  class="bg-secondary text-light p-3 m-0"
+                ><code>&lt;div class="card"&gt;
+    &lt;div class="card-header"&gt;Notificaciones&lt;/div&gt;
+    &lt;div class="card-body"&gt;
+        &lt;p class="m-0"&gt;Tenés 3 mensajes nuevos.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="card-footer"&gt;
+        &lt;a href="#" class="btn btn-primary btn-sm"&gt;Ver todo&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+
+          <article id="imagen" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Card con imagen</h2>
+            <p class="mb-3">
+              Si querés una imagen arriba pegada al borde, usá
+              <code>.card-img</code> sobre un <code>&lt;img&gt;</code> antes del
+              body. Como la card tiene <code>overflow: hidden</code>, la imagen
+              respeta los bordes redondeados.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Card con cover</div>
+              <div class="card-body bg-light">
+                <div class="row">
+                  <div class="col-12 col-md-6 offset-md-3">
+                    <div class="card">
+                      <img src="../images/Houndoom-card-image.jpeg" alt="Houndoom" class="card-img"/>
+                      <div class="card-body">
+                        <h3 class="fs-5 fw-bold mb-2">Houndoom-style</h3>
+                        <p class="text-muted m-0">
+                          La card respeta el border-radius de la imagen sin que
+                          tengas que hacer nada raro.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer p-0">
+                <pre
+                  class="bg-secondary text-light p-3 m-0"
+                ><code>&lt;div class="card"&gt;
+    &lt;img src="foto.jpg" alt="perro" class="card-img"&gt;
+    &lt;div class="card-body"&gt;
+        &lt;h3 class="fs-5 fw-bold mb-2"&gt;Houndoom-style&lt;/h3&gt;
+        &lt;p class="text-muted m-0"&gt;Texto bajo la imagen.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+
+          <article id="colores" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Cards con color</h2>
+            <p class="mb-3">
+              Combinando con utilidades de fondo y texto podés crear cards con
+              identidad. Acá un ejemplo con header pintado de
+              <code>bg-primary</code>.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Mezclando utilidades</div>
+              <div class="card-body bg-light">
+                <div class="row">
+                  <div class="col-12 col-md-6 mb-3">
+                    <div class="card">
+                      <div class="card-header bg-primary text-white">
+                        Plan estándar
+                      </div>
+                      <div class="card-body">
+                        <p class="fs-3 fw-bold m-0">$9 / mes</p>
+                        <p class="text-muted">Lo justo y necesario.</p>
+                        <button class="btn btn-primary btn-block">
+                          Elegir
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 mb-3">
+                    <div class="card">
+                      <div class="card-header bg-dark text-light">Plan pro</div>
+                      <div class="card-body">
+                        <p class="fs-3 fw-bold m-0">$19 / mes</p>
+                        <p class="text-muted">Para los que quieren todo.</p>
+                        <button class="btn btn-dark btn-block">Elegir</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer p-0">
+                <pre
+                  class="bg-secondary text-light p-3 m-0"
+                ><code>&lt;div class="card"&gt;
+    &lt;div class="card-header bg-primary text-white"&gt;Plan estándar&lt;/div&gt;
+    &lt;div class="card-body"&gt;
+        &lt;p class="fs-3 fw-bold m-0"&gt;$9 / mes&lt;/p&gt;
+        &lt;p class="text-muted"&gt;Lo justo y necesario.&lt;/p&gt;
+        &lt;button class="btn btn-primary btn-block"&gt;Elegir&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+
+          <article id="sombras" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Sombras y elevación</h2>
+            <p class="mb-3">
+              Las cards traen una sombra suave por defecto, pero podés cambiarla
+              con las utilidades <code>.shadow-sm</code>,
+              <code>.shadow-md</code> o <code>.shadow-lg</code> para darle más o
+              menos profundidad.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Tres niveles de sombra</div>
+              <div class="card-body bg-light">
+                <div class="row">
+                  <div class="col-12 col-md-4 mb-3 px-2">
+                    <div class="card shadow-sm">
+                      <div class="card-body text-center">
+                        <p class="fw-bold m-0">.shadow-sm</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4 mb-3 px-2">
+                    <div class="card shadow-md">
+                      <div class="card-body text-center">
+                        <p class="fw-bold m-0">.shadow-md</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4 mb-3 px-2">
+                    <div class="card shadow-lg">
+                      <div class="card-body text-center">
+                        <p class="fw-bold m-0">.shadow-lg</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer p-0">
+                <pre
+                  class="bg-secondary text-light p-3 m-0"
+                ><code>&lt;div class="card shadow-sm"&gt;...&lt;/div&gt;
+&lt;div class="card shadow-md"&gt;...&lt;/div&gt;
+&lt;div class="card shadow-lg"&gt;...&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+
+          <article id="grilla">
+            <!-- el h-100 es para que no queden cards desparejas si una tiene mas texto -->
+            <h2 class="fs-2 fw-bold mb-3">Cards dentro del grid</h2>
+            <p class="mb-3">
+              El truco más común: meter cards adentro de un
+              <code>.row</code> con columnas <code>.col-md-*</code>. Así te
+              quedan las típicas listas de productos, planes o features.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">3 cards responsivas</div>
+              <div class="card-body bg-light">
+                <div class="row">
+                  <div class="col-12 col-md-4 mb-3 px-2">
+                    <div class="card shadow-sm h-100">
+                      <div class="card-body text-center">
+                        <div class="fs-1 mb-2">⚡</div>
+                        <h3 class="fs-5 fw-bold">Rápido</h3>
+                        <p class="text-muted m-0">
+                          Clases base para comenzar a crear sitios web.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4 mb-3 px-2">
+                    <div class="card shadow-sm h-100">
+                      <div class="card-body text-center">
+                        <div class="fs-1 mb-2">🎯</div>
+                        <h3 class="fs-5 fw-bold">Directo</h3>
+                        <p class="text-muted m-0">
+                          Clases que se entienden de un vistazo.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4 mb-3 px-2">
+                    <div class="card shadow-sm h-100">
+                      <div class="card-body text-center">
+                        <div class="fs-1 mb-2">🔥</div>
+                        <h3 class="fs-5 fw-bold">Con mucho estilo</h3>
+                        <p class="text-muted m-0">
+                          Rojo, negro y naranja. Hellgar por siempre.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer p-0">
+                <pre
+                  class="bg-secondary text-light p-3 m-0"
+                ><code>&lt;div class="row"&gt;
+    &lt;div class="col-12 col-md-4 mb-3 px-2"&gt;
+        &lt;div class="card shadow-sm h-100"&gt;
+            &lt;div class="card-body text-center"&gt;
+                &lt;h3 class="fs-5 fw-bold"&gt;Rápido&lt;/h3&gt;
+                &lt;p class="text-muted m-0"&gt;Texto corto.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- repetí la columna las veces que necesites --&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-dark text-light py-4 mt-5">
+      <div class="container text-center">
+        <p class="m-0">HellgarUI © · 2026</p>
+      </div>
+    </footer>
+  </body>
+</html>

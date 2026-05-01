@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Badges · HellgarUI</title>
+    <link rel="icon" href="../icon/hellgar-icon.png" type="image/png" />
+    <link rel="stylesheet" href="/HellgarUI/scss/main.css" />
+  </head>
+  <body class="bg-light">
+    <nav class="navbar">
+      <a href="/index.html" class="navbar-brand">HellgarUI</a>
+
+      <input type="checkbox" id="main-nav-toggle" class="navbar-toggle" />
+      <label
+        for="main-nav-toggle"
+        class="navbar-toggler"
+        aria-label="Abrir menú"
+      >
+        <span></span><span></span><span></span>
+      </label>
+
+      <ul class="navbar-nav">
+        <li><a href="/index.html" class="navbar-link">Inicio</a></li>
+        <li><a href="grid.html" class="navbar-link">Grid</a></li>
+        <li><a href="buttons.html" class="navbar-link">Botones</a></li>
+        <li><a href="cards.html" class="navbar-link">Cards</a></li>
+        <li><a href="alerts.html" class="navbar-link">Alerts</a></li>
+        <li><a href="forms.html" class="navbar-link">Forms</a></li>
+        <li><a href="tables.html" class="navbar-link">Tablas</a></li>
+        <li><a href="colors.html" class="navbar-link">Colores</a></li>
+        <li><a href="typography.html" class="navbar-link">Tipografía</a></li>
+        <li><a href="spacing.html" class="navbar-link">Spacing</a></li>
+        <li><a href="utilities.html" class="navbar-link">Utilidades</a></li>
+        <li><a href="badges.html" class="navbar-link active">Badges</a></li>
+        <li><a href="../utilities/navbar.html" class="navbar-link">Navbars</a></li>
+        <li><a href="../utilities/footer.html" class="navbar-link">Footers</a></li>
+      </ul>
+    </nav>
+
+    <header class="bg-secondary py-5">
+      <div class="container">
+        <span class="badge badge-primary mb-2">componente</span>
+        <h1 class="fs-1 fw-bold text-white m-0">Badges</h1>
+        <p class="fs-5 text-light m-0">
+          Etiquetas pequeñas para estados, contadores o categorías.
+        </p>
+      </div>
+    </header>
+
+    <main class="container py-5">
+      <div class="row">
+        <aside class="col-12 col-md-3 mb-4">
+          <div class="card shadow-sm">
+            <div class="card-header">En esta página</div>
+            <div class="card-body">
+              <ul class="d-flex flex-column gap-2">
+                <li>
+                  <a href="#basico" class="navbar-link text-dark"
+                    >Badge básico</a
+                  >
+                </li>
+                <li>
+                  <a href="#variantes" class="navbar-link text-dark"
+                    >Variantes</a
+                  >
+                </li>
+                <li>
+                  <a href="#pill" class="navbar-link text-dark"
+                    >Forma cápsula</a
+                  >
+                </li>
+                <li>
+                  <a href="#contextos" class="navbar-link text-dark"
+                    >En la práctica</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+
+        <div class="col-12 col-md-9">
+          <article id="basico" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Badge básico</h2>
+            <p class="mb-3">
+              La clase base es <code>.badge</code> y por sí sola ya tiene un
+              padding, un radio y un texto en negrita. Sumale una variante de
+              color para ver algo.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Vista previa</div>
+              <div class="card-body bg-light">
+                <span class="badge badge-primary">primary</span>
+              </div>
+              <div class="card-footer p-0">
+                <pre
+                  class="bg-secondary text-light p-3 m-0"
+                ><code>&lt;span class="badge badge-primary"&gt;primary&lt;/span&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+
+          <article id="variantes" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Variantes de color</h2>
+            <p class="mb-3">
+              Tres variantes de la marca:
+              <code>.badge-primary</code>,
+              <code>.badge-secondary</code> y
+              <code>.badge-accent</code>. Las dos primeras llevan texto blanco;
+              la accent (naranja brasa) usa texto oscuro para mantener
+              contraste.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Vista previa</div>
+              <div class="card-body bg-light">
+                <div class="d-flex flex-wrap gap-2 align-items-center">
+                  <span class="badge badge-primary">primary</span>
+                  <span class="badge badge-secondary">secondary</span>
+                  <span class="badge badge-accent">accent</span>
+                </div>
+              </div>
+              <div class="card-footer p-0">
+                <pre
+                  class="bg-secondary text-light p-3 m-0"
+                ><code>&lt;span class="badge badge-primary"&gt;primary&lt;/span&gt;
+&lt;span class="badge badge-secondary"&gt;secondary&lt;/span&gt;
+&lt;span class="badge badge-accent"&gt;accent&lt;/span&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+
+          <article id="pill" class="mb-5">
+            <h2 class="fs-2 fw-bold mb-3">Forma cápsula</h2>
+            <p class="mb-3">
+              Sumá <code>.badge-pill</code> al lado de cualquier variante para
+              redondear los bordes por completo y obtener una etiqueta tipo
+              píldora.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Vista previa</div>
+              <div class="card-body bg-light">
+                <div class="d-flex flex-wrap gap-2 align-items-center">
+                  <span class="badge badge-primary badge-pill">primary</span>
+                  <span class="badge badge-secondary badge-pill">secondary</span>
+                  <span class="badge badge-accent badge-pill">accent</span>
+                </div>
+              </div>
+              <div class="card-footer p-0">
+                <pre
+                  class="bg-secondary text-light p-3 m-0"
+                ><code>&lt;span class="badge badge-primary badge-pill"&gt;v1.0&lt;/span&gt;</code></pre>
+              </div>
+            </div>
+          </article>
+
+          <article id="contextos">
+            <h2 class="fs-2 fw-bold mb-3">En la práctica</h2>
+            <p class="mb-3">
+              Tres usos típicos: junto a un título, dentro de un botón como
+              contador y como etiqueta de categoría en un card.
+            </p>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Junto a un título</div>
+              <div class="card-body bg-light">
+                <h3 class="fs-4 fw-bold m-0">
+                  Documentación
+                  <span class="badge badge-accent badge-pill">nuevo</span>
+                </h3>
+              </div>
+            </div>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-header">Como contador en un botón</div>
+              <div class="card-body bg-light">
+                <button class="btn btn-primary">
+                  Mensajes
+                  <span class="badge badge-secondary badge-pill ms-2">12</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="card shadow-sm">
+              <div class="card-header">Como etiqueta en un card</div>
+              <div class="card-body bg-light">
+                <div class="card shadow-sm">
+                  <div class="card-body">
+                    <span class="badge badge-primary mb-2">tutorial</span>
+                    <h3 class="fs-5 fw-bold mb-2">
+                      Empezar con HellgarUI en 5 minutos
+                    </h3>
+                    <p class="text-muted m-0">
+                      Aprendé a montar tu primer layout sin escribir CSS desde
+                      cero.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-dark text-light py-4 mt-5">
+      <div class="container text-center">
+        <p class="m-0">HellgarUI © · 2026</p>
+      </div>
+    </footer>
+  </body>
+</html>
